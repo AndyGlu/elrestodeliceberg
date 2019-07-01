@@ -95,5 +95,6 @@
                 </div>
             </div>
         </div>
+        @yield('content')
     </body>
 </html>
