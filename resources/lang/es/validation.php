@@ -148,6 +148,7 @@ return [
     'attributes' => [
       'first_name' => 'nombre',
       'name' => 'nombre',
+      'mail' => 'mail',
       'password' => 'contraseña',
       'phone' => 'teléfono'
     ],
