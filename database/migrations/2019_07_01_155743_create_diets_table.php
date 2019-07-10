@@ -15,6 +15,8 @@ class CreateDietsTable extends Migration
     {
         Schema::create('diets', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('dietType', 30)->nullable(false);
+            $table->string('dietDescription', 350)->nullable();
             $table->timestamps();
         });
     }
