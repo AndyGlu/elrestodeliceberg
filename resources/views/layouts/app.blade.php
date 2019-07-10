@@ -92,7 +92,7 @@
             <div class="dropdown-divider"></div>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
-                <button type="submit" name="">Log Out</button>
+                <button class="dropdown-item" id="logoutbutton" type="submit" name="">Log Out</button>
             </form>
           </div>
       <?php else : ?>
@@ -187,7 +187,7 @@
                 <div class="dropdown-divider"></div>
                 <form class="dropdown-item" id="logout-form" action="{{ route('logout') }}" method="POST">
                     @csrf
-                    <button class="dropdown-item" type="submit" name="">Log Out</button>
+                    <button class="dropdown-item" id="logoutbutton" type="submit" name="">Log Out</button>
                 </form>
                 </div>
               </li>

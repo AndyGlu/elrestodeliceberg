@@ -200,6 +200,10 @@ a.nav-link.cateoria-navibar{
   color: #888888;
 }
 
+#logoutbutton{
+  padding: 0;
+}
+
 /* CAROUSEL DE IMAGENES */
 
 img#img-carousel{
