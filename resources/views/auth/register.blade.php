@@ -6,7 +6,7 @@
         <div class="col-md-8">
           {{-- {{ $errors }} --}}
 
-            <div class="card">
+            <div class="card" id="registerauth">
                 <div class="card-header">{{ __('Regístrate') }}</div>
 
                 <div class="card-body">

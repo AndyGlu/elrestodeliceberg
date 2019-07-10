@@ -34,3 +34,11 @@ a{
   position: static;
   display: inline-block;
 }
+
+div#loginauth{
+  margin-top: 2em;
+}
+
+div#registerauth{
+  margin-top: 2em;
+}

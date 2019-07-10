@@ -95,7 +95,7 @@ return [
     'numeric' => 'El campo :attribute debe conformarse únicamente de números.',
     'present' => 'The :attribute field must be present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'El :attribute es obligatorio.',
+    'required' => 'El campo :attribute es obligatorio.',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
     'required_with' => 'The :attribute field is required when :values is present.',
@@ -112,7 +112,7 @@ return [
     'starts_with' => 'The :attribute must start with one of the following: :values',
     'string' => 'The :attribute must be a string.',
     'timezone' => 'The :attribute must be a valid zone.',
-    'unique' => 'Este campo (:attribute) es inválido.',
+    'unique' => 'El dato :attribute ya esta en uso.',
     'uploaded' => 'The :attribute failed to upload.',
     'url' => 'The :attribute format is invalid.',
     'uuid' => 'The :attribute must be a valid UUID.',
@@ -148,6 +148,7 @@ return [
     'attributes' => [
       'first_name' => 'nombre',
       'name' => 'nombre',
+      'lastname' => 'apellido',
       'mail' => 'mail',
       'password' => 'contraseña',
       'phone' => 'teléfono'
