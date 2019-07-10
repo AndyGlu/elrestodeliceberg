@@ -1,0 +1,276 @@
+/* GENERALES */
+
+*{
+ box-sizing: border-box;
+}
+
+ul, ol{
+ padding: none;
+}
+
+li{
+ list-style-type: none;
+}
+
+a{
+ text-decoration: none;
+ color: none;
+}
+
+/* BODY */
+
+/* HABRIA QUE PONERLE ALGUN FONDO COPADO NO? */
+
+/* NAV BAR 1 */
+
+.navbutton{
+  color: black;
+}
+
+nav.la-de-arriba{
+  border-top: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* NAV BAR 2 */
+
+nav#la-segunda{
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+}
+
+/* NAV BAR DESKTOP */
+
+nav#navbar-desktop{
+  display: none;
+}
+
+/* CAROUSEL DE IMAGENES */
+
+img#img-carousel{
+  height: 5em;
+}
+
+/* CAROUSEL/CUADRO DE CATEGORIAS */
+
+div.categorias-container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 2em 0em;
+  background-color: #ffffff;
+}
+
+div.categoria{
+  margin: 0 auto;
+  align-items: center;
+}
+
+img.img-categoria{
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+}
+
+img.img-categoria-vegan{
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+}
+
+img.img-categoria-vegetariano{
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+}
+
+img.img-categoria-organico{
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+}
+
+/* PRODUCTOS */
+
+div.container-productos{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.producto{
+  display: flex;
+  width: 40%;
+  margin: 1em auto;
+  flex-direction: column;
+}
+
+div.img-producto-container{
+  display: flex;
+}
+
+img.imgproducto{
+  width: 100%;
+  height: 100%;
+}
+
+/* BUSQUEDA IZQUIERDA */
+
+div.busqueda{
+  display: none;
+}
+
+/* FOOTER */
+
+footer{
+  border-top: 1px solid lightgrey;
+  background-color: rgb(228, 251, 251);
+}
+
+.footerlinks{
+  text-decoration: none;
+  color: black;
+}
+
+.login1{
+  padding: 3vw;
+}
+
+.iconoiceberg{
+  width: 60px;
+  height: 60px;
+  margin: 0.5rem;
+}
+
+.checkbox{
+  position: static;
+  display: inline-block;
+}
+
+/* QUERIES */
+
+/* RESOLUCION DE PANTALLA DESKTOP = 992px */
+
+@media(min-width: 992px){
+
+/* NAV BAR 1 */
+
+nav.la-de-arriba{
+  display: none;
+}
+
+/* NAV BAR 2 */
+
+nav#la-segunda{
+  display: none;
+}
+
+button.navbar-toggler{
+  display: none;
+}
+
+li#categoria-menu{
+  display: none;
+}
+
+/* NAV BAR DESKTOP */
+
+nav#navbar-desktop{
+  display: flex;
+}
+
+div.collapse.navbar-collapse#navbarSupportedContent{
+  justify-content: flex-end;
+}
+
+form.form-inline.md-form.form-sm.mt-0{
+  display: none;
+}
+
+div.dropdown-menu.busqueda-navibar-desktop{
+  left: 750px;
+}
+
+div.dropdown-menu.user-desktop{
+  left: -106px;
+}
+
+a.nav-link.cateoria-navibar{
+  color: #888888;
+}
+
+/* CAROUSEL DE IMAGENES */
+
+img#img-carousel{
+  width: 16em;
+  height: 8em;
+}
+
+/* CAROUSEL/CUADRO DE CATEGORIAS */
+
+div.categorias-container{
+  display: none;
+}
+
+/* CONTAINER DE PRODUCTOS Y FLITROS */
+
+div.container-productos-busqueda{
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-top: 1.5em;
+}
+
+/* FILTROS */
+
+div.busqueda{
+  margin: 0 auto;
+  margin-left: 2em;
+  width: 17%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid lightgrey;
+}
+
+/* PRODUCTOS */
+
+div.container-productos{
+  width: 75%;
+  margin: 0 auto;
+}
+
+div.producto{
+  width: 30%;
+  margin: 1em auto;
+}
+
+div.producto{
+  padding: none;
+  margin: none;
+}
+
+
+img.imgproducto{
+  width: 100%;
+  height: 100%;
+}
+
+footer{
+  border-top: 1px solid lightgrey;
+  margin-top: 2em;
+}
+
+}
+
+@media(min-width: 1080px){
+
+  a.nav-link.dropdown-toggle.busqueda{
+    display: none;
+  }
+
+  form.form-inline.md-form.form-sm.mt-0{
+    display: flex;
+  }
+
+}

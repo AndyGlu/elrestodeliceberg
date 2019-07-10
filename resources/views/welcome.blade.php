@@ -1,96 +1,256 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
+@section('content')
 
-        <title>El Resto del Iceberg</title>
+<!-- CARROUSEL IMAGENES -->
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image:url('images/alimentos-naturales1.jpeg'); background-size:cover; background-position:center">
+        <img class="d-block w-100" id="img-carousel" src="" alt="">
+      </div>
+      <div class="carousel-item" style="background-image:url('images/bayas-naturales.jpg'); background-size:cover;">
+        <img class="d-block w-100" id="img-carousel" src="" alt="">
+      </div>
+      <div class="carousel-item" style="background-image:url('images/caju-natural.jpg'); background-size:cover; background-position:center">
+        <img class="d-block w-100" id="img-carousel" src="" alt="">
+      </div>
+      <div class="carousel-item" style="background-image:url('images/miel-natural.jpg'); background-size:cover; background-position:center">
+        <img class="d-block w-100" id="img-carousel" src="" alt="">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Próximo</span>
+    </a>
+  </div>
+</div>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+<!-- CAROUSEL/CUADRO CATEGORIAS -->
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+<div class="categorias-container">
 
-            .position-ref {
-                position: relative;
-            }
+  <div class="categoria">
+    <a class="circulito" href="#"><img class="img-categoria" src="images/celiaco icono2.png" alt=""></a>
+  </div>
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+  <div class="categoria">
+    <a class="circulito" href="#"><img class="img-categoria-vegan" src="images/vegan icono.png" alt=""></a>
+  </div>
 
-            .content {
-                text-align: center;
-            }
+  <div class="categoria">
+    <a class="circulito" href="#"><img class="img-categoria-vegetariano" src="images/cruelty free icono.svg" alt=""></a>
+  </div>
 
-            .title {
-                font-size: 84px;
-            }
+  <div class="categoria">
+    <a class="circulito" href="#"><img class="img-categoria-organico" src="images/organico icono.svg" alt=""></a>
+  </div>
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
+</div>
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+<div class="container-productos-busqueda">
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+  <!-- FILTROS -->
 
-            <div class="content">
-                <div class="title m-b-md">
-                    El Resto del Iceberg
-                </div>
+  <div class="busqueda">
+    <h3>Filtros</h3>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-        @yield('content')
-    </body>
-</html>
+    <h5>Categoria</h5>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+      <label class="form-check-label" for="defaultCheck1">
+        Atributo Alimenticio
+      </label>
+    </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label" for="defaultCheck1">
+      Atributo Alimenticio
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label" for="defaultCheck1">
+      Atributo Alimenticio
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label" for="defaultCheck1">
+      Atributo Alimenticio
+    </label>
+  </div>
+
+  <h5>Categoria</h5>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label" for="defaultCheck1">
+      Atributo Alimenticio
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label" for="defaultCheck1">
+      Atributo Alimenticio
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label" for="defaultCheck1">
+      Atributo Alimenticio
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label" for="defaultCheck1">
+      Atributo Alimenticio
+    </label>
+  </div>
+
+  <h5>Categoria</h5>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label" for="defaultCheck1">
+      Atributo Alimenticio
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label" for="defaultCheck1">
+      Atributo Alimenticio
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label" for="defaultCheck1">
+      Atributo Alimenticio
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label" for="defaultCheck1">
+      Atributo Alimenticio
+    </label>
+  </div>
+
+</div>
+
+
+  <!-- PRODUCTOS -->
+
+  <div class="container-productos">
+
+    <div class="producto">
+      <div class="img-producto-container">
+        <img class="imgproducto" src="images/frutos-secos.jpg" alt="producto1">
+      </div>
+      <div class="info-producto-container">
+        <h3>lorem ipsum</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
+        <button type="button" class="btn btn-info">Más Info</button>
+      </div>
+    </div>
+
+    <div class="producto">
+      <div class="img-producto-container">
+        <img class="imgproducto" src="images/frutos-secos.jpg" alt="producto1">
+      </div>
+      <div class="info-producto-container">
+        <h3>lorem ipsum</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
+        <button type="button" class="btn btn-info">Más Info</button>
+      </div>
+    </div>
+
+    <div class="producto">
+      <div class="img-producto-container">
+        <img class="imgproducto" src="images/frutos-secos.jpg" alt="producto1">
+      </div>
+      <div class="info-producto-container">
+        <h3>lorem ipsum</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
+        <button type="button" class="btn btn-info">Más Info</button>
+      </div>
+    </div>
+
+    <div class="producto">
+      <div class="img-producto-container">
+        <img class="imgproducto" src="images/frutos-secos.jpg" alt="producto1">
+      </div>
+      <div class="info-producto-container">
+        <h3>lorem ipsum</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
+        <button type="button" class="btn btn-info">Más Info</button>
+      </div>
+    </div>
+
+    <div class="producto">
+      <div class="img-producto-container">
+        <img class="imgproducto" src="images/frutos-secos.jpg" alt="producto1">
+      </div>
+      <div class="info-producto-container">
+        <h3>lorem ipsum</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
+        <button type="button" class="btn btn-info">Más Info</button>
+      </div>
+    </div>
+
+    <div class="producto">
+      <div class="img-producto-container">
+        <img class="imgproducto" src="images/frutos-secos.jpg" alt="producto1">
+      </div>
+      <div class="info-producto-container">
+        <h3>lorem ipsum</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
+        <button type="button" class="btn btn-info">Más Info</button>
+      </div>
+    </div>
+
+    <div class="producto">
+      <div class="img-producto-container">
+        <img class="imgproducto" src="images/frutos-secos.jpg" alt="producto1">
+      </div>
+      <div class="info-producto-container">
+        <h3>lorem ipsum</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
+        <button type="button" class="btn btn-info">Más Info</button>
+      </div>
+    </div>
+
+    <div class="producto">
+      <div class="img-producto-container">
+        <img class="imgproducto" src="images/frutos-secos.jpg" alt="producto1">
+      </div>
+      <div class="info-producto-container">
+        <h3>lorem ipsum</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
+        <button type="button" class="btn btn-info">Más Info</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+@endsection
