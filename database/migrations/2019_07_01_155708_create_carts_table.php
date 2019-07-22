@@ -17,10 +17,10 @@ class CreateCartsTable extends Migration
             $table->bigIncrements('id');
             $table->string('product', 100)->nullable(false);
             $table->datetime('cartDate')->nullable(false);
-            $table->integer('quantity', 11)->nullable();
+            $table->integer('quantity')->nullable();
             $table->decimal('price', 10, 2)->nullable();
             $table->string('cartStatus', 50)->nullable();
-            $table->integer('purchaseOrderNumber', 10)->unique()->nullable(false);
+            $table->integer('purchaseOrderNumber')->unique()->nullable(false);
             $table->timestamps();
         });
     }

@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table->string('productName', 100)->nullable(false);
             $table->string('productDescription', 1000)->nullable();
-            $table->integer('stock', 11)->nullable(false);
+            $table->integer('stock')->nullable(false);
             $table->decimal('price', 10, 2)->nullable();
             $table->timestamps();
         });
