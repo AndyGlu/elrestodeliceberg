@@ -208,8 +208,9 @@ a.nav-link.cateoria-navibar{
 
 img#img-carousel{
   width: 16em;
-  height: 8em;
+  height: 15em;
 }
+
 
 /* CAROUSEL/CUADRO DE CATEGORIAS */
 
@@ -264,6 +265,8 @@ footer{
   border-top: 1px solid lightgrey;
   margin-top: 2em;
 }
+}
+
 
 }
 

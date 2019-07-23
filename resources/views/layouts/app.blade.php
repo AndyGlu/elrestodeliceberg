@@ -10,7 +10,7 @@
 
     <link rel="icon" href="https://image.flaticon.com/icons/png/512/641/641985.png">
 
-    <title>HOME | El Resto Del Iceberg</title>
+    <title>@yield('pageTitle')</title>
   </head>
   <body>
     <div class="container-index">

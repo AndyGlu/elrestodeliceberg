@@ -1,6 +1,6 @@
 @extends('welcome')
 
-@section('title', 'agregar producto')
+@section('title', 'Productos')
 
 @section('content')
 

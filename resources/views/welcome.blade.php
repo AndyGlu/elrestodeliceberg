@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('pageTitle', "ERDI")
 @section('content')
 
 <!-- CARROUSEL IMAGENES -->
@@ -11,13 +12,13 @@
       <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item active" style="background-image:url('images/alimentos-naturales1.jpeg'); background-size:cover; background-position:center">
+      <div class="carousel-item active" "carousel CSS" style="background-image:url('images/Natural Food.jpg'); background-size:cover; background-position:center">
         <img class="d-block w-100" id="img-carousel" src="" alt="">
       </div>
-      <div class="carousel-item" style="background-image:url('images/bayas-naturales.jpg'); background-size:cover;">
+      <div class="carousel-item" style="background-image:url('images/nuts 1.jpg'); background-size:cover;">
         <img class="d-block w-100" id="img-carousel" src="" alt="">
       </div>
-      <div class="carousel-item" style="background-image:url('images/caju-natural.jpg'); background-size:cover; background-position:center">
+      <div class="carousel-item" style="background-image:url('images/berries.jpg'); background-size:cover; background-position:center">
         <img class="d-block w-100" id="img-carousel" src="" alt="">
       </div>
       <div class="carousel-item" style="background-image:url('images/miel-natural.jpg'); background-size:cover; background-position:center">
