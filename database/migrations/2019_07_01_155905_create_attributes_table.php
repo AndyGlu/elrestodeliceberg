@@ -45,6 +45,7 @@ class CreateAttributesTable extends Migration
             $table->string('magnesio', 20)->nullable();
             $table->string('sodio', 20)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -20,7 +20,9 @@ class CreateUsersTable extends Migration
             $table->string('lastname', 45)->nullable(false);
             $table->string('password', 100)->nullable(false);
             $table->string('phone', 25)->unique()->nullable(false);
+            $table->integer('role')->default(0)->nullable(false);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

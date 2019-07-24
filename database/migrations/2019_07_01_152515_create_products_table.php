@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->integer('stock')->nullable(false);
             $table->decimal('price', 10, 2)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

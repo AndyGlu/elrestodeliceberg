@@ -22,6 +22,7 @@ class CreateCartsTable extends Migration
             $table->string('cartStatus', 50)->nullable();
             $table->integer('purchaseOrderNumber')->unique()->nullable(false);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

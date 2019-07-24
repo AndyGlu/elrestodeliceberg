@@ -18,6 +18,7 @@ class CreateDietsTable extends Migration
             $table->string('dietType', 30)->nullable(false);
             $table->string('dietDescription', 350)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -18,6 +18,7 @@ class CreateCategoriesTable extends Migration
             $table->string('categoryName', 100)->unique()->nullable(false);
             $table->string('categoryDescription', 100)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

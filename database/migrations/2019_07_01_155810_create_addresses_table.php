@@ -24,6 +24,7 @@ class CreateAddressesTable extends Migration
             $table->string('zipCode', 10)->nullable(false);
             $table->string('observations', 300)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
