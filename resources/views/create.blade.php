@@ -9,12 +9,13 @@
     <div class="container">
       <br>
       <h2>Cargar un producto</h2><br  />
-      <form method="post">
+      <form method="post" action="/create" enctype="multipart/form-data">
+        @csrf
         <div class="row">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
             <label for="name">Nombre:</label>
-            <input type="text" class="form-control" name="name">
+            <input type="text" class="form-control" name="productName">
           </div>
         </div>
         <div class="row">
@@ -39,13 +40,9 @@
             </div>
           </div>
 
-          <div class="cargaArchivoDiv" style="width: 297px; margin: 0 auto">
-          <form method="post" enctype="multipart/form-data" class="cargaArchivoForm">
-    <input type="file" name="files[]" multiple />
+            <input type="file" name="img1" style="width: 297px; margin: 0 auto">
     {{-- <input type="submit" value="Cargar" name="submit" /> --}}
-  </form>
   <br>
-</div>
 </div>
 
         <div class="row">

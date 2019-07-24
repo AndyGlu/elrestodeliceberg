@@ -20,3 +20,4 @@ public function categories(){
 public function carts(){
   return $this->belongsToMany('\App\cart');
 }
+}
