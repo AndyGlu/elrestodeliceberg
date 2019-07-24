@@ -39,10 +39,10 @@
             </div>
           </div>
 
-          <div class="cargaArchivoDiv">
+          <div class="cargaArchivoDiv" style="width: 297px; margin: 0 auto">
           <form method="post" enctype="multipart/form-data" class="cargaArchivoForm">
     <input type="file" name="files[]" multiple />
-    <input type="submit" value="Cargar" name="submit" />
+    {{-- <input type="submit" value="Cargar" name="submit" /> --}}
   </form>
   <br>
 </div>
@@ -51,7 +51,8 @@
         <div class="row">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
-        <br>    <button type="submit" class="btn btn-success" style="margin-left:38px">Agregar producto</button>
+        <br>
+           <button type="submit" class="btn btn-success" style="margin-left:38px">Agregar producto</button>
           </div>
         </div>
         </div>
