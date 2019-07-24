@@ -8,6 +8,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+  public $guarded = [];
+
     use Notifiable;
 
     /**
@@ -36,4 +38,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function carts(){
+    return $this->hasMany("App\cart", "cart_id");
+    }
+    public function addresses(){
+    return $this->hasMany("App\address", "address_id");
+    }
 }
