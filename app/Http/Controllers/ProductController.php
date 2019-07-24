@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\Diet;
+
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -25,6 +27,10 @@ class ProductController extends Controller
      */
     public function create()
     {
+      $diets = Diet::all();
+      Meter categorías y todo eso.
+Meter COMPACT
+
       return view('create');
     }
     /**
@@ -44,6 +50,9 @@ class ProductController extends Controller
        $product->stock = $request->stock;
        $product->price = $request->price;
        $product->img1 = $file;
+       $product->img2 = $file;
+       $product->img3 = $file;
+
 
        // dd($product);
        $product->save();

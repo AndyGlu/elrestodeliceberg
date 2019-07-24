@@ -40,9 +40,26 @@
             </div>
           </div>
 
+              @foreach ($dietas as $dieta){
+
+                  <input type="checkbox" name="$dieta" value=$dieta>
+
+              }
+
+              @endforeach
+
+<div class="">
+  <label for="Image">Carga de imágenes:</label>
+  <br>
             <input type="file" name="img1" style="width: 297px; margin: 0 auto">
+            </div>
     {{-- <input type="submit" value="Cargar" name="submit" /> --}}
   <br>
+  <div class="">
+  <input type="file" name="img2" style="width: 297px; margin: 0 auto">
+</div>
+  <br>
+  <input type="file" name="img3" style="width: 297px; margin: 0 auto">
 </div>
 
         <div class="row">
