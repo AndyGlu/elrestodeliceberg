@@ -24,7 +24,7 @@ class DietController extends Controller
      */
     public function create()
     {
-        //
+        return view('createDiet');
     }
 
     /**
@@ -35,7 +35,11 @@ class DietController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $diet = new Diet;
+       $diet->dietType = $request->dietType;
+       $diet->dietDescription = $request->dietDescription;
+       // dd($diet);
+       $diet->save();
     }
 
     /**

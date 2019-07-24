@@ -14,3 +14,4 @@ class Diet extends Model
     public function products(){
       return $this->belongsToMany('\App\Product');
 }
+}

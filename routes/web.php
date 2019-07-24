@@ -26,3 +26,9 @@ Route::post('/create', 'ProductController@store');
 
 Route::get('/createAt', 'AttributeController@create');
 Route::post('/createAt', 'AttributeController@store');
+
+Route::get('/createDiet', 'DietController@create');
+Route::post('/createDiet', 'DietController@store');
+
+Route::get('/createCat', 'CategoryController@create');
+Route::post('/createCat', 'CategoryController@store');
