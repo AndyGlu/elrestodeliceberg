@@ -24,7 +24,7 @@ class AttributeController extends Controller
      */
     public function create()
     {
-        //
+        return view('createAt');
     }
 
     /**
@@ -35,7 +35,12 @@ class AttributeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+      $attribute = new Attribute;
+       $attribute->attributeName = $request->attributeName;
+
+       // dd($attribute);
+       $attribute->save();
     }
 
     /**
