@@ -40,13 +40,46 @@
             </div>
           </div>
 
-              @foreach ($dietas as $dieta){
 
-                  <input type="checkbox" name="$dieta" value=$dieta>
 
-              }
 
+          <div class="form-group col-md-4">
+            <label for="Diet">Categoría:</label>
+            <select class="" name="category">
+              @foreach ($categories as $category)
+                <option value="{{$category->id}}">{{$category->categoryName}}</option>
               @endforeach
+            </select>
+
+          </div>
+
+  <div class="form-group col-md-4">
+              <label for="Diet">Dietas:</label>
+              <br>
+              @foreach ($diets as $diet)
+
+                <input type="checkbox" name="diet" value="{{$diet->id}}"><p>{{$diet->dietType}}</p>
+              @endforeach
+            </div>
+
+<br>
+<br>
+
+            <div class="form-group col-md-4">
+                        <label for="Attribute">Atributos:</label>
+                        <br>
+                        @foreach ($attributes as $attribute)
+
+                          <input type="checkbox" name="attribute" value="{{$attribute->id}}"><p>{{$attribute->attributeName}}</p>
+                        @endforeach
+                      </div>
+
+                      <br>
+                      <br>
+
+
+
+
 
 <div class="">
   <label for="Image">Carga de imágenes:</label>

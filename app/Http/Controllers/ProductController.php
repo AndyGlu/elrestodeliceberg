@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use App\Diet;
+use App\Category;
+use App\Cart;
+use App\Attribute;
+
 
 use Illuminate\Http\Request;
 
@@ -28,10 +32,11 @@ class ProductController extends Controller
     public function create()
     {
       $diets = Diet::all();
-      Meter categorías y todo eso.
-Meter COMPACT
+      $categories = Category::all();
+      $carts = Cart::all();
+      $attributes = Attribute::all();
 
-      return view('create');
+      return view('create',compact('diets', 'categories', 'carts', 'attributes'));
     }
     /**
      * Store a newly created resource in storage.
