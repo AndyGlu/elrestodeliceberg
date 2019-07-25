@@ -105,7 +105,7 @@
 
       </li>
       <li class="nav-item" id="cart">
-        <a class="nav-link" href="#"><i class="fas fa-shopping-cart navbutton"></i></a>
+        <a class="nav-link" href=""><i class="fas fa-shopping-cart navbutton"></i></a>
       </li>
       </nav>
 
@@ -201,7 +201,7 @@
           <!-- </ul> -->
         </div>
 
-      <a href="#"><i class="fas fa-shopping-cart navbutton"></i></a>
+      <a href="/cart"><i class="fas fa-shopping-cart navbutton"></i></a>
         </nav>
       </header>
 

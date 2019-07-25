@@ -21,7 +21,7 @@ class ProductController extends Controller
     public function index()
     {
       $products = Product::all();
-      return view('products', compact('products'));
+      return view('welcome', compact('products'));
     }
 
     /**
@@ -36,7 +36,7 @@ class ProductController extends Controller
       $carts = Cart::all();
       $attributes = Attribute::all();
 
-      return view('create',compact('diets', 'categories', 'carts', 'attributes'));
+      return view('create', compact('diets', 'categories', 'carts', 'attributes'));
     }
     /**
      * Store a newly created resource in storage.
@@ -48,6 +48,10 @@ class ProductController extends Controller
     {
       $path = $request->file('img1')->store('public/products');
       $file = basename($path);
+      // $path = $request->file('img2')->store('public/products');
+      // $file = basename($path);
+      // $path = $request->file('img3')->store('public/products');
+      // $file = basename($path);
 
       $product = new Product;
        $product->productName = $request->productName;

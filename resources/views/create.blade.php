@@ -69,7 +69,6 @@
                         <label for="Attribute">Atributos:</label>
                         <br>
                         @foreach ($attributes as $attribute)
-
                           <input type="checkbox" name="attribute" value="{{$attribute->id}}"><p>{{$attribute->attributeName}}</p>
                         @endforeach
                       </div>
@@ -81,11 +80,11 @@
 
 
 
+<label for="Image">Carga de imágenes:</label>
 <div class="">
-  <label for="Image">Carga de imágenes:</label>
   <br>
-            <input type="file" name="img1" style="width: 297px; margin: 0 auto">
-            </div>
+  <input type="file" name="img1" style="width: 297px; margin: 0 auto">
+  </div>
     {{-- <input type="submit" value="Cargar" name="submit" /> --}}
   <br>
   <div class="">

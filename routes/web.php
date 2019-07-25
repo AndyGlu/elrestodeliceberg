@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/products', 'ProductController@index');
+Route::get('/welcome', 'ProductController@index');
 
 Auth::routes();
 
@@ -32,3 +32,5 @@ Route::post('/createDiet', 'DietController@store');
 
 Route::get('/createCat', 'CategoryController@create');
 Route::post('/createCat', 'CategoryController@store');
+
+Route::get('/cart', 'CartController@show');

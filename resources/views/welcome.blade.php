@@ -2,6 +2,7 @@
 @section('pageTitle', "ERDI")
 @section('content')
 
+
 <!-- CARROUSEL IMAGENES -->
 
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -157,12 +158,24 @@
 
 </div>
 
-
   <!-- PRODUCTOS -->
 
   <div class="container-productos">
+@foreach ($products as $product)
+  <div class="producto">
+    <div class="img-producto-container" style="width: 100%; height: 60%;">
+      <img class="imgproducto" src="storage/products/{{$product->img1}}" alt="">
+    </div>
+    <div class="info-producto-container">
+      <h3>{{$product->productName}}</h3>
+      <p>{{$product->productDescription}}</p>
+      <a href="#"><button type="button" class="btn btn-info">Mas info</button></a>
+      <a href="#"><button type="button" class="btn btn-success"><i class="fas fa-shopping-cart navbutton"></i></button></a>
+    </div>
+  </div>
+@endforeach
 
-    <div class="producto">
+    {{-- <div class="producto">
       <div class="img-producto-container">
         <img class="imgproducto" src="images/frutos-secos.jpg" alt="producto1">
       </div>
@@ -237,18 +250,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
         <button type="button" class="btn btn-info">Más Info</button>
       </div>
-    </div>
-
-    <div class="producto">
-      <div class="img-producto-container">
-        <img class="imgproducto" src="images/frutos-secos.jpg" alt="producto1">
-      </div>
-      <div class="info-producto-container">
-        <h3>lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-        <button type="button" class="btn btn-info">Más Info</button>
-      </div>
-    </div>
+    </div> --}}
 
   </div>
 
