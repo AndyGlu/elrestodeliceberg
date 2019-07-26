@@ -64,106 +64,25 @@
   <!-- FILTROS -->
 
   <div class="busqueda">
-    <h3>Filtros</h3>
-
-    <h5>Categoria</h5>
-
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-      <label class="form-check-label" for="defaultCheck1">
-        Atributo Alimenticio
-      </label>
+  <h3>Búsqueda por filtros</h3>
+    <div class="dietFilter">
+      @foreach ($diets as $diet)
+        <input type="checkbox" name="diets[]" value="{{$diet->id}}"><p>{{$diet->dietType}}</p>
+      @endforeach
     </div>
-
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-    <label class="form-check-label" for="defaultCheck1">
-      Atributo Alimenticio
-    </label>
+    <div class="attributeFilter">
+      @foreach ($attributes as $attribute)
+        <input type="checkbox" name="attributes[]" value="{{$attribute->id}}"><p>{{$attribute->attributeName}}</p>
+      @endforeach
+    </div>
   </div>
-
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-    <label class="form-check-label" for="defaultCheck1">
-      Atributo Alimenticio
-    </label>
-  </div>
-
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-    <label class="form-check-label" for="defaultCheck1">
-      Atributo Alimenticio
-    </label>
-  </div>
-
-  <h5>Categoria</h5>
-
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-    <label class="form-check-label" for="defaultCheck1">
-      Atributo Alimenticio
-    </label>
-  </div>
-
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-    <label class="form-check-label" for="defaultCheck1">
-      Atributo Alimenticio
-    </label>
-  </div>
-
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-    <label class="form-check-label" for="defaultCheck1">
-      Atributo Alimenticio
-    </label>
-  </div>
-
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-    <label class="form-check-label" for="defaultCheck1">
-      Atributo Alimenticio
-    </label>
-  </div>
-
-  <h5>Categoria</h5>
-
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-    <label class="form-check-label" for="defaultCheck1">
-      Atributo Alimenticio
-    </label>
-  </div>
-
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-    <label class="form-check-label" for="defaultCheck1">
-      Atributo Alimenticio
-    </label>
-  </div>
-
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-    <label class="form-check-label" for="defaultCheck1">
-      Atributo Alimenticio
-    </label>
-  </div>
-
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-    <label class="form-check-label" for="defaultCheck1">
-      Atributo Alimenticio
-    </label>
-  </div>
-
-</div>
 
   <!-- PRODUCTOS -->
 
   <div class="container-productos">
 @foreach ($products as $product)
   <div class="producto">
-    <div class="img-producto-container" style="width: 100%; height: 60%;">
+    <div class="img-producto-container">
       <img class="imgproducto" src="{{Storage::url($product->img1)}}" alt="">
     </div>
     <div class="info-producto-container">

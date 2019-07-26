@@ -22,7 +22,9 @@ class ProductController extends Controller
     {
       $products = Product::all();
       $categories = Category::all();
-      return view('welcome', compact('products', 'categories'));
+      $diets = Diet::all();
+      $attributes = Attribute::all();
+      return view('welcome', compact('products', 'categories', 'diets', 'attributes'));
     }
 
 
