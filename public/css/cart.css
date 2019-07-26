@@ -1,1 +1,67 @@
 /* ACA VAMOS A TOCAR TODO EL CSS DEL CART */
+
+/* DIV DE PRODUCTOS */
+
+div.cartProductsContainer{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  /* flex-direction: row; */
+  background-color: rgb(228, 251, 251);
+  border-radius: 2em;
+  width: 60%;
+}
+
+h5.prodTittle{
+  width: 11%;
+  margin-right: 4%;
+}
+
+div.cartimgprodcont{
+  width: 6%;
+  margin-right: 3%;
+}
+
+img.cartprodimg{
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+}
+
+form.cantasegurar{
+  margin: 0px;
+}
+
+div.contadorCant{
+width: 5%;
+margin: 0px;
+}
+
+div.priceShower{
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+p.productPrice{
+  margin: 0px;
+  font-family: sans-serif;
+}
+
+div.asegurarButton{
+width: 5%;
+margin: 0px;
+}
+
+form.deleteButton{
+  margin: 0px;
+}
+
+div.deleteProdButton{
+width: 5%;
+margin: 0px;
+}
+
+button.btn.btn-light.buttonDelete:hover{
+  color: white;
+  background-color: red;
+}

@@ -10,28 +10,37 @@
 <body>
 <h2>Cart</h2>
         @forelse ($cart as $item)
-          <p>{{$item->name}}</p>
+          <div class="cartProductsContainer">
+          <h5 class="prodTittle">{{$item->name}}</h5>
           <div class="cartimgprodcont">
             <img class="cartprodimg" src="/storage/products/{{$item->featured_img}}" alt="">
           </div>
-          <form class="" action="/cart/{{$item->id}}" method="post">
+          <form class="cantasegurar" action="/cart/{{$item->id}}" method="post">
               @csrf
-              <input type="number" id="cant-product" name="cant" value="{{$item->cant}}"  min="1" max="10">
-              <input type="submit" name="" value="Asegurar">
+              <div class="contadorCant">
+                <input type="number" id="cant-product" name="cant" value="{{$item->cant}}"  min="1" max="10">
+              </div>
           </form>
 
+<div class="priceShower">
+  <p class="productPrice">${{$item->price}}</p>
+</div>
 
-          <form class="butom-elminar" action="/cart/{{$item->id}}" method="post">
-              @csrf <!--Capa de seguridad Obligatoria para Laravel-->
-              {{ method_field('DELETE') }}
-              <!-- lo de arriba equivale a <input type="hidden" name="_method" value= "delete" > -->
-              <input type="submit" name="" value="Eliminar producto">
-          </form>
+<div class="deleteProdButton">
+  <form class="deleteButton" action="/cart/{{$item->id}}" method="post">
+    @csrf <!--Capa de seguridad Obligatoria para Laravel-->
+    {{ method_field('DELETE') }}
+    <!-- lo de arriba equivale a <input type="hidden" name="_method" value= "delete" > -->
+    <button type="submit" class="btn btn-light buttonDelete" value="Eliminar producto">Eliminar</button>
+    {{-- <input type="submit" name="" value="Eliminar producto"> --}}
+  </form>
+</div>
+</div>
         @empty
           <p>El carrito esta vacío</p>
         @endforelse
 
-<a href="/resumen" class="btn btn-primary ">comprar</a>
+<a href="/resumen" class="btn btn-primary ">Comprar</a>
 @endsection
 
 </body>

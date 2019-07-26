@@ -170,87 +170,10 @@
       <h3>{{$product->productName}}</h3>
       <p>{{$product->productDescription}}</p>
       <a href="#"><button type="button" class="btn btn-info">Mas info</button></a>
-      <a href="/product/addtocart/{{$product->id}}"><button type="button" class="btn btn-success"><i class="fas fa-shopping-cart navbutton"></i></button></a>
+      <a href="/product/addtocart/{{$product->id}}"><button type="button" class="btn btn-success"><i class="fas fa-shopping-cart navbutton" id="productCart"></i></button></a>
     </div>
   </div>
 @endforeach
-
-    {{-- <div class="producto">
-      <div class="img-producto-container">
-        <img class="imgproducto" src="images/frutos-secos.jpg" alt="producto1">
-      </div>
-      <div class="info-producto-container">
-        <h3>lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-        <button type="button" class="btn btn-info">Más Info</button>
-      </div>
-    </div>
-
-    <div class="producto">
-      <div class="img-producto-container">
-        <img class="imgproducto" src="images/frutos-secos.jpg" alt="producto1">
-      </div>
-      <div class="info-producto-container">
-        <h3>lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-        <button type="button" class="btn btn-info">Más Info</button>
-      </div>
-    </div>
-
-    <div class="producto">
-      <div class="img-producto-container">
-        <img class="imgproducto" src="images/frutos-secos.jpg" alt="producto1">
-      </div>
-      <div class="info-producto-container">
-        <h3>lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-        <button type="button" class="btn btn-info">Más Info</button>
-      </div>
-    </div>
-
-    <div class="producto">
-      <div class="img-producto-container">
-        <img class="imgproducto" src="images/frutos-secos.jpg" alt="producto1">
-      </div>
-      <div class="info-producto-container">
-        <h3>lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-        <button type="button" class="btn btn-info">Más Info</button>
-      </div>
-    </div>
-
-    <div class="producto">
-      <div class="img-producto-container">
-        <img class="imgproducto" src="images/frutos-secos.jpg" alt="producto1">
-      </div>
-      <div class="info-producto-container">
-        <h3>lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-        <button type="button" class="btn btn-info">Más Info</button>
-      </div>
-    </div>
-
-    <div class="producto">
-      <div class="img-producto-container">
-        <img class="imgproducto" src="images/frutos-secos.jpg" alt="producto1">
-      </div>
-      <div class="info-producto-container">
-        <h3>lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-        <button type="button" class="btn btn-info">Más Info</button>
-      </div>
-    </div>
-
-    <div class="producto">
-      <div class="img-producto-container">
-        <img class="imgproducto" src="images/frutos-secos.jpg" alt="producto1">
-      </div>
-      <div class="info-producto-container">
-        <h3>lorem ipsum</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-        <button type="button" class="btn btn-info">Más Info</button>
-      </div>
-    </div> --}}
 
   </div>
 

@@ -115,6 +115,10 @@ img.imgproducto{
   height: 100%;
 }
 
+i#productCart{
+  color: white;
+}
+
 /* BUSQUEDA IZQUIERDA */
 
 div.busqueda{
