@@ -9,7 +9,7 @@
 
 <body>
 <div class="forelsecontainer">
-  <h2>Cart</h2>
+  <h2>Carrito</h2>
         @forelse ($cart as $item)
           <div class="cartProductsContainer">
           <h5 class="prodTittle">{{$item->name}}</h5>
