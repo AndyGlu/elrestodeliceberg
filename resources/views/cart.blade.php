@@ -8,7 +8,8 @@
 </head>
 
 <body>
-<h2>Cart</h2>
+<div class="forelsecontainer">
+  <h2>Cart</h2>
         @forelse ($cart as $item)
           <div class="cartProductsContainer">
           <h5 class="prodTittle">{{$item->name}}</h5>
@@ -40,7 +41,8 @@
           <p>El carrito esta vacío</p>
         @endforelse
 
-<a href="/resumen" class="btn btn-primary ">Comprar</a>
+<a href="/" class="btn btn-primary coprarButton">Comprar</a>
+</div>
 @endsection
 
 </body>

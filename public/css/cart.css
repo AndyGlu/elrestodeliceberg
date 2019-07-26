@@ -2,24 +2,39 @@
 
 /* DIV DE PRODUCTOS */
 
+div.forelsecontainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1%;
+  width: 80%;
+  margin: 0 auto;
+}
+
 div.cartProductsContainer{
+  margin: 0px;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  /* flex-direction: row; */
+  justify-content: space-around;
   background-color: rgb(228, 251, 251);
   border-radius: 2em;
-  width: 60%;
+  width: 80%;
+  margin-bottom: 1%;
+}
+
+h2{
+  align-self: flex-start;
+  margin-left: 8%;
 }
 
 h5.prodTittle{
-  width: 11%;
-  margin-right: 4%;
+  width: 20%;
+  margin: 0px;
 }
 
 div.cartimgprodcont{
-  width: 6%;
-  margin-right: 3%;
+  width: 10%;
 }
 
 img.cartprodimg{
@@ -39,7 +54,6 @@ margin: 0px;
 
 div.priceShower{
   margin-left: 2%;
-  margin-right: 2%;
 }
 
 p.productPrice{
@@ -59,9 +73,15 @@ form.deleteButton{
 div.deleteProdButton{
 width: 5%;
 margin: 0px;
+margin-right: 2.5%;
 }
 
 button.btn.btn-light.buttonDelete:hover{
   color: white;
   background-color: red;
+}
+
+a.btn.btn-primary.coprarButton{
+  align-self: flex-start;
+  margin-left: 8%;
 }
