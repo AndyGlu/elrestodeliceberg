@@ -21,8 +21,10 @@ class ProductController extends Controller
     public function index()
     {
       $products = Product::all();
-      return view('welcome', compact('products'));
+      $categories = Category::all();
+      return view('welcome', compact('products', 'categories'));
     }
+
 
     /**
      * Show the form for creating a new resource.

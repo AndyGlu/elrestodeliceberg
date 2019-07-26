@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -151,11 +152,43 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <a class="nav-link cateoria-navibar" href="#">Categoria1</a>
-          <a class="nav-link cateoria-navibar" href="#">Categoria2</a>
-          <a class="nav-link cateoria-navibar" href="#">Categoria3</a>
-          <a class="nav-link cateoria-navibar" href="#">Categoria4</a>
-          <a class="nav-link cateoria-navibar" href="#">Categoria5</a>
+          {{-- <ul class="navbar-nav mr-auto">
+        <li class="nav-item active" id="categoria-menu"> --}}
+
+            @foreach ($categories as $category)
+            @if ($category->categoryName == "Frutos secos")
+              <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+        {{$category->categoryName}}
+      </a>
+    @endif
+    @if ($category->categoryName == "Especias")
+    <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+      {{$category->categoryName}}
+    </a>
+    @endif
+    @if ($category->categoryName == "Harinas y avenas")
+    <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+      {{$category->categoryName}}
+    </a>
+    @endif
+    @if ($category->categoryName == "Barras de cereal")
+    <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+      {{$category->categoryName}}
+    </a>
+    @endif
+    @if ($category->categoryName == "Jugos y bebidas")
+    <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+      {{$category->categoryName}}
+    </a>
+    @endif
+    @endforeach
+
+
+
+{{--
+        </li>
+      </ul> --}}
+
 
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
