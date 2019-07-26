@@ -1,4 +1,8 @@
-
+@php
+  use App\Product;
+  use App\Category;
+  // $categories = Categories::all();
+@endphp
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -84,12 +88,12 @@
         </div>
       </div>
       <li class="nav-item dropdown" id="user">
-        <a class="nav-link dropdown-toggle navbutton" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle navbutton" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-user"></i>
         </a>
         <?php if (Auth::check()): ?>
           <div class="dropdown-menu user-desktop navbutton" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="usuario.php">Perfil</a>
+            <a class="dropdown-item" href="/user">Perfil</a>
             <div class="dropdown-divider"></div>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
@@ -121,24 +125,43 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active" id="categoria-menu">
-              <a class="nav-link" href="#">Categoría 1 <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item active" id="categoria-menu">
-              <a class="nav-link" href="#">Categoría 2 <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item active" id="categoria-menu">
-              <a class="nav-link" href="#">Categoría 3 <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item active" id="categoria-menu">
-              <a class="nav-link" href="#">Categoría 4 <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item active" id="categoria-menu">
-              <a class="nav-link" href="#">Categoría 5 <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item active" id="categoria-menu">
-              <a class="nav-link" href="#">Categoría 6 <span class="sr-only"></span></a>
-            </li>
+            @foreach (Category::all() as $category)
+            @if ($category->categoryName == "Frutos secos")
+              <li class="nav-item active" id="categoria-menu">
+                <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+              </li>
+        {{$category->categoryName}}
+      </a>
+    @endif
+    @if ($category->categoryName == "Especias")
+      <li class="nav-item active" id="categoria-menu">
+        <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+      </li>
+       {{$category->categoryName}}
+    </a>
+    @endif
+    @if ($category->categoryName == "Harinas y avenas")
+      <li class="nav-item active" id="categoria-menu">
+        <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+      </li>
+      {{$category->categoryName}}
+    </a>
+    @endif
+    @if ($category->categoryName == "Barras de cereal")
+      <li class="nav-item active" id="categoria-menu">
+        <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+      </li>
+      {{$category->categoryName}}
+    </a>
+    @endif
+    @if ($category->categoryName == "Jugos y bebidas")
+      <li class="nav-item active" id="categoria-menu">
+        <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+      </li>
+      {{$category->categoryName}}
+    </a>
+    @endif
+    @endforeach
           </ul>
         </div>
       </nav>
@@ -155,7 +178,7 @@
           {{-- <ul class="navbar-nav mr-auto">
         <li class="nav-item active" id="categoria-menu"> --}}
 
-            @foreach ($categories as $category)
+            @foreach (Category::all() as $category)
             @if ($category->categoryName == "Frutos secos")
               <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
         {{$category->categoryName}}
@@ -211,12 +234,12 @@
 
           <!-- <ul class="navbar-nav mr-auto"> -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle navbutton" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle navbutton" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-user"></i>
               </a>
               <?php if (Auth::check()): ?>
                 <div class="dropdown-menu user-desktop navbutton" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="usuario.php">Perfil</a>
+                  <a class="dropdown-item" href="/user">Perfil</a>
                 <div class="dropdown-divider"></div>
                 <form class="dropdown-item" id="logout-form" action="{{ route('logout') }}" method="POST">
                     @csrf
