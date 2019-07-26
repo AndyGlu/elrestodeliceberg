@@ -57,8 +57,7 @@
               <label for="Diet">Dietas:</label>
               <br>
               @foreach ($diets as $diet)
-
-                <input type="checkbox" name="diet" value="{{$diet->id}}"><p>{{$diet->dietType}}</p>
+                <input type="checkbox" name="diets[]" value="{{$diet->id}}"><p>{{$diet->dietType}}</p>
               @endforeach
             </div>
 
@@ -69,7 +68,7 @@
                         <label for="Attribute">Atributos:</label>
                         <br>
                         @foreach ($attributes as $attribute)
-                          <input type="checkbox" name="attribute" value="{{$attribute->id}}"><p>{{$attribute->attributeName}}</p>
+                          <input type="checkbox" name="attributes[]" value="{{$attribute->id}}"><p>{{$attribute->attributeName}}</p>
                         @endforeach
                       </div>
 

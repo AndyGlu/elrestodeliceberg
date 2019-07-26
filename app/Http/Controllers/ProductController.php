@@ -48,25 +48,39 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-      $path = $request->file('img1')->store('public/products');
-      $file = basename($path);
-      // $path = $request->file('img2')->store('public/products');
-      // $file = basename($path);
-      // $path = $request->file('img3')->store('public/products');
-      // $file = basename($path);
+      // dd($request->only('diets', 'attributes'));
 
-      $product = new Product;
-       $product->productName = $request->productName;
-       $product->productDescription = $request->productDescription;
-       $product->stock = $request->stock;
-       $product->price = $request->price;
-       $product->img1 = $file;
-       $product->img2 = $file;
-       $product->img3 = $file;
+      $category = Category::find($request->get('category'));
+
+      $product = $category->products()->create([
+        'productName' => $request->productName,
+        'productDescription' => $request->productDescription,
+        'stock' => $request->stock,
+        'price' => $request->price,
+        'img1' => $request->file('img1')->store('public/products'),
+        'img2' => $request->hasFile('img2') ? $request->file('img2')->store('public/products') : null,
+        'img3' => $request->hasFile('img3') ? $request->file('img3')->store('public/products') : null,
+      ]);
+
+       $product->diets()->attach($request->diets);
+       $product->attributes()->attach($request->get('attributes'));
+       // esto ultimo es para las relaciones y tablas pivot
+
+      // dd($product);
 
 
-       // dd($product);
-       $product->save();
+      // $product = new Product;
+      //  $product->productName = $request->productName;
+      //  $product->productDescription = $request->productDescription;
+      //  $product->stock = $request->stock;
+      //  $product->price = $request->price;
+      //  $product->img1 = $file;
+      //  $product->img2 = $file;
+      //  $product->img3 = $file;
+      //
+      //  // dd($product);
+      //  $product->save();
+
     }
 
     /**

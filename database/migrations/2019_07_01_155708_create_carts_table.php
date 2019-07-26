@@ -30,8 +30,7 @@ class CreateCartsTable extends Migration
           //este campo marca como borrado en la base de datos sin borrarlo de la bd como etiquetarlo
           $table->softDeletes();
 
-          $table->foreign('user_id')
-          ->references('id')->on('users');
+          $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

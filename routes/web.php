@@ -14,10 +14,7 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', function(){
-  return redirect('/welcome');
-});
-Route::get('/welcome', 'ProductController@index');
+Route::get('/', 'ProductController@index');
 
 Auth::routes();
 

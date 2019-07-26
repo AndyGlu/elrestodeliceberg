@@ -13,15 +13,13 @@ class CreateProductsanddietsTable extends Migration
      */
     public function up()
     {
-      Schema::create('productsanddiets', function (Blueprint $table) {
+      Schema::create('diet_product', function (Blueprint $table) {
           $table->bigIncrements('id');
           $table->bigInteger('product_id')->unsigned();
           $table->bigInteger('diet_id')->unsigned();
           $table->timestamps();
-          $table->foreign('product_id')
-          ->references('id')->on('products');
-          $table->foreign('diet_id')
-          ->references('id')->on('diets');
+          $table->foreign('product_id')->references('id')->on('products');
+          $table->foreign('diet_id')->references('id')->on('diets');
         });
     }
 

@@ -15,7 +15,7 @@ public function diets(){
   return $this->belongsToMany('\App\diet');
 }
 public function categories(){
-  return $this->belongsToMany('\App\category');
+  return $this->belongsTo('\App\category');
 }
 public function carts(){
   return $this->belongsToMany('\App\cart');
