@@ -14,7 +14,9 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-
+Route::get('/', function(){
+  return view('welcome');
+});
 Route::get('/welcome', 'ProductController@index');
 
 Auth::routes();
@@ -33,4 +35,8 @@ Route::post('/createDiet', 'DietController@store');
 Route::get('/createCat', 'CategoryController@create');
 Route::post('/createCat', 'CategoryController@store');
 
-Route::get('/cart', 'CartController@show');
+Route::get('/cart', 'CartController@show')->middleware('auth');
+Route::post('/cart/{id}', 'CartController@update');
+Route::delete('/cart/{id}', 'CartController@destroy');
+
+Route::get('/product/addtocart/{id}', 'CartController@store')->middleware('auth');

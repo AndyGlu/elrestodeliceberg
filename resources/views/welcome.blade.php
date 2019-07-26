@@ -170,7 +170,7 @@
       <h3>{{$product->productName}}</h3>
       <p>{{$product->productDescription}}</p>
       <a href="#"><button type="button" class="btn btn-info">Mas info</button></a>
-      <a href="#"><button type="button" class="btn btn-success"><i class="fas fa-shopping-cart navbutton"></i></button></a>
+      <a href="/product/addtocart/{{$product->id}}"><button type="button" class="btn btn-success"><i class="fas fa-shopping-cart navbutton"></i></button></a>
     </div>
   </div>
 @endforeach

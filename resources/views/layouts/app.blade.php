@@ -112,7 +112,7 @@
       <!-- LA SEGUNDA NAV BAR MOBILE-->
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="la-segunda">
-               <a href="index.php"><img id="icon23" class="iconoicebergsmall" src="images/iconIceberg.png" alt=""></a>
+               <a href="/welcome"><img id="icon23" class="iconoicebergsmall" src="images/iconIceberg.png" alt=""></a>
          <a class="navbar-brand" href="index.php"><small>El Resto del Iceberg</small></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
@@ -145,8 +145,8 @@
       <!-- NAV BAR DESKTOP -->
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar-desktop">
-             <a href="index.php"><img id="icon23" class="iconoiceberg" src="images/iconIceberg.png" alt=""></a>
-          <a class="navbar-brand" href="index.php">El Resto del Iceberg</a>
+             <a href="/welcome"><img id="icon23" class="iconoiceberg" src="images/iconIceberg.png" alt=""></a>
+          <a class="navbar-brand" href="/welcome">El Resto del Iceberg</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>

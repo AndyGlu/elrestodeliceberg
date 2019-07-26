@@ -14,15 +14,24 @@ class CreateCartsTable extends Migration
     public function up()
     {
         Schema::create('carts', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('product', 100)->nullable(false);
-            $table->datetime('cartDate')->nullable(false);
-            $table->integer('quantity')->nullable();
-            $table->decimal('price', 10, 2)->nullable();
-            $table->string('cartStatus', 50)->nullable();
-            $table->integer('purchaseOrderNumber')->unique()->nullable(false);
-            $table->timestamps();
-            $table->softDeletes();
+          $table->bigIncrements('id');
+          $table->string('name', 100);
+          $table->string('description', 300);
+          $table->decimal('price', 10, 2);
+          $table->string('featured_img', 300);
+          $table->integer('cant');
+          $table->bigInteger('user_id')->unsigned()->nullable();//Deben coinsidir en:
+          //1. Data type (ambos deben ser bigInteger (bigIncrements es por detrás bigInteger. Revisen la documentación para bigIncrements.))
+          //2. Collation: por default son iguales.
+          //3. La definición de signo: por default Laravel define que bigIncrements es de tipo unsigned por lo tanto hay que aclararlo también en este campo.
+          $table->smallInteger('status')->default(0);
+          $table->bigInteger('cart_number')->nullable();
+          $table->timestamps();
+          //este campo marca como borrado en la base de datos sin borrarlo de la bd como etiquetarlo
+          $table->softDeletes();
+
+          $table->foreign('user_id')
+          ->references('id')->on('users');
         });
     }
 

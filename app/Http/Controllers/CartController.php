@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Cart;
+use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
@@ -33,9 +35,25 @@ class CartController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($id)
     {
-        //
+      //para que agrege al carrito debo antes estar logueado,use middleware(auth) corre bien:)
+        $product = Product::find($id);
+
+        $userLogueado =  Auth::user()->id; //traer usuario que esta comprando.
+
+        $cart = new Cart;
+
+        $cart->name = $product->productName;
+        $cart->description = $product->productDescription;
+        $cart->price = $product->price;
+        $cart->featured_img = $product->img1;
+        $cart->cant = 1;
+        $cart->user_id = $userLogueado;
+
+        $cart->save();
+
+        return redirect('/welcome');
     }
 
     /**
@@ -44,9 +62,11 @@ class CartController extends Controller
      * @param  \App\Cart  $cart
      * @return \Illuminate\Http\Response
      */
-    public function show(Cart $cart)
+    public function show()
     {
-        //
+      $userLogueado =  Auth::user()->id;
+      $cart = Cart::where('user_id','=',$userLogueado)->where('status','=', 0)->get();
+      return view('cart', compact('cart'));
     }
 
     /**
@@ -67,9 +87,12 @@ class CartController extends Controller
      * @param  \App\Cart  $cart
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cart $cart)
+    public function update(Request $request, $id)
     {
-        //
+      $cart = Cart::find($id);
+      $cart->cant = $request->cant ;
+      $cart->save();
+      return redirect('/cart');
     }
 
     /**
@@ -78,8 +101,28 @@ class CartController extends Controller
      * @param  \App\Cart  $cart
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cart $cart)
+    public function destroy($id)
     {
-        //
+      $cart = Cart::find($id);
+      $cart->delete();
+
+      return redirect('/cart');
+    }
+
+    public function buy(){
+//darle a todas las compras un id_carrito incremental al anterior
+    //campiarle a todos estos el estado a 1(comprado)
+    $userLogueado =  Auth::user()->id;
+    $cart_Usuario = Cart::where('user_id','=',$userLogueado)->where('status','=', 0)->get();
+    $cartNumber = Cart::max('cart_number');
+    foreach ( $cart_Usuario as $elem) {
+      $elem->cart_number = $cartNumber + 1;
+      $elem->status =  1;
+      $elem->save();
+    }
+
+    //esta es mi solucion ,no se que pedo cuando 2 personas entren
+//por javascript se le debe mostrar un resumen de todo el carrito en simples filas(opcional)
+     return redirect('/welcome');
     }
 }
