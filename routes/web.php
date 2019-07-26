@@ -23,7 +23,7 @@ Route::get('/', 'ProductController@index');
 Route::get('/create', 'ProductController@create');
 Route::post('/create', 'ProductController@store');
 
-Route::get('/category/{id}', 'CategoryController@show');
+Route::get('/category/{category}', 'CategoryController@show');
 
 Route::get('/createAt', 'AttributeController@create');
 Route::post('/createAt', 'AttributeController@store');

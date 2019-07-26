@@ -48,9 +48,11 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Category $category)
     {
-      return view('categoryshow');
+      return view('categoryshow', [
+        'category' => $category
+      ]);
     }
 
     /**
