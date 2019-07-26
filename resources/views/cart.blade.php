@@ -14,7 +14,7 @@
           <div class="cartProductsContainer">
           <h5 class="prodTittle">{{$item->name}}</h5>
           <div class="cartimgprodcont">
-            <img class="cartprodimg" src="/storage/products/{{$item->featured_img}}" alt="">
+            <img class="cartprodimg" src="{{Storage::url($item->featured_img)}}" alt="">
           </div>
           <form class="cantasegurar" action="/cart/{{$item->id}}" method="post">
               @csrf
@@ -23,9 +23,9 @@
               </div>
           </form>
 
-<div class="priceShower">
-  <p class="productPrice">${{$item->price}}</p>
-</div>
+          <div class="priceShower">
+            <p class="productPrice">${{$item->price}}</p>
+          </div>
 
 <div class="deleteProdButton">
   <form class="deleteButton" action="/cart/{{$item->id}}" method="post">

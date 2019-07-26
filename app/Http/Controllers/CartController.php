@@ -53,7 +53,7 @@ class CartController extends Controller
 
         $cart->save();
 
-        return redirect('/welcome');
+        return redirect('/');
     }
 
     /**

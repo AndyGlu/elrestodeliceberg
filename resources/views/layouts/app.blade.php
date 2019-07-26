@@ -117,7 +117,7 @@
       <!-- LA SEGUNDA NAV BAR MOBILE-->
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="la-segunda">
-               <a href="/welcome"><img id="icon23" class="iconoicebergsmall" src="images/iconIceberg.png" alt=""></a>
+               <a href="/"><img id="icon23" class="iconoicebergsmall" src="images/iconIceberg.png" alt=""></a>
          <a class="navbar-brand" href="index.php"><small>El Resto del Iceberg</small></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
@@ -169,8 +169,8 @@
       <!-- NAV BAR DESKTOP -->
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar-desktop">
-             <a href="/welcome"><img id="icon23" class="iconoiceberg" src="images/iconIceberg.png" alt=""></a>
-          <a class="navbar-brand" href="/welcome">El Resto del Iceberg</a>
+             <a href="/"><img id="icon23" class="iconoiceberg" src="images/iconIceberg.png" alt=""></a>
+          <a class="navbar-brand" href="/">El Resto del Iceberg</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -180,27 +180,27 @@
 
             @foreach (Category::all() as $category)
             @if ($category->categoryName == "Frutos secos")
-              <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+              <a class="nav-link" href="/category/{{$category->id}}" name="category" style="text-align:center; text-decoration:none; color:black">
         {{$category->categoryName}}
       </a>
     @endif
     @if ($category->categoryName == "Especias")
-    <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+    <a class="nav-link" href="/category/{{$category->id}}" name="category" style="text-align:center; text-decoration:none; color:black">
       {{$category->categoryName}}
     </a>
     @endif
     @if ($category->categoryName == "Harinas y avenas")
-    <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+    <a class="nav-link" href="/category/{{$category->id}}" name="category" style="text-align:center; text-decoration:none; color:black">
       {{$category->categoryName}}
     </a>
     @endif
     @if ($category->categoryName == "Barras de cereal")
-    <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+    <a class="nav-link" href="/category/{{$category->id}}" name="category" style="text-align:center; text-decoration:none; color:black">
       {{$category->categoryName}}
     </a>
     @endif
     @if ($category->categoryName == "Jugos y bebidas")
-    <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+    <a class="nav-link" href="/category/{{$category->id}}" name="category" style="text-align:center; text-decoration:none; color:black">
       {{$category->categoryName}}
     </a>
     @endif

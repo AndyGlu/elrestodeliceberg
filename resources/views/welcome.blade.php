@@ -164,7 +164,7 @@
 @foreach ($products as $product)
   <div class="producto">
     <div class="img-producto-container" style="width: 100%; height: 60%;">
-      <img class="imgproducto" src="storage/products/{{$product->img1}}" alt="">
+      <img class="imgproducto" src="{{Storage::url($product->img1)}}" alt="">
     </div>
     <div class="info-producto-container">
       <h3>{{$product->productName}}</h3>
