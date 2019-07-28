@@ -37,6 +37,28 @@
   </div>
 </div>
 
+<div class="contenedor-iconosbajocarousel" >
+<div class="contenedor-iconosbajocarousel-cadaicono">
+<svg class="svg-inline--fa fa-w-20 fa-5x service-icon svg-icon-text svgiceberg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89.72 69.42"><path d="M83.21.29H6.79A6.65,6.65,0,0,0,.14,6.93V63.07a6.65,6.65,0,0,0,6.65,6.64H83.21a6.65,6.65,0,0,0,6.65-6.64V6.93A6.65,6.65,0,0,0,83.21.29Zm-81.07,15H87.86V28.76H2.14Zm4.65-13H83.21a4.65,4.65,0,0,1,4.65,4.64v6.4H2.14V6.93A4.65,4.65,0,0,1,6.79,2.29ZM83.21,67.71H6.79a4.65,4.65,0,0,1-4.65-4.64V30.76H87.86V63.07A4.65,4.65,0,0,1,83.21,67.71ZM29.68,51.9H14.25a1,1,0,0,0,0,2H29.68a1,1,0,0,0,0-2Zm30.86,0H34.82a1,1,0,0,0,0,2H60.54a1,1,0,0,0,0-2Z"></path></svg>
+<h3 class="service-title" >3 cuotas sin interés!</h3>
+<p class="font-weight-light" >Con todas las tarjetas y bancos</p>
+</div>
+
+<div class="" style="text-align:center; padding:1em; width:33%">
+<svg class="svg-inline--fa fa-w-20 fa-5x service-icon svg-icon-text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 69.96" style="width:30%; height:1em"><path d="M87.93,34.84a.5.5,0,0,0-.08-.12.59.59,0,0,0-.1-.17l-16-18.23A1,1,0,0,0,71,16H60.53V6.65A6.63,6.63,0,0,0,53.9,0H6.63A6.63,6.63,0,0,0,0,6.65V49.19a6.64,6.64,0,0,0,6.63,6.64h3.64a10.7,10.7,0,1,0,20.24,0H63a10.7,10.7,0,1,0,20.24,0H87a1,1,0,0,0,1-1V35.21A1.16,1.16,0,0,0,87.93,34.84ZM70.58,18,84.8,34.21H60.53V18ZM20.39,68a8.71,8.71,0,1,1,8.7-8.71A8.72,8.72,0,0,1,20.39,68Zm0-19.41a10.7,10.7,0,0,0-9.2,5.25H6.63A4.63,4.63,0,0,1,2,49.19V6.65A4.63,4.63,0,0,1,6.63,2H53.9a4.64,4.64,0,0,1,4.64,4.64V53.83h-29A10.69,10.69,0,0,0,20.39,48.58ZM73.07,68a8.71,8.71,0,1,1,8.7-8.71A8.72,8.72,0,0,1,73.07,68Zm9.19-14.16a10.67,10.67,0,0,0-18.38,0H60.53V36.21H86V53.83Z"></path></svg>
+<h3 class="service-title">Envío gratis!</h3>
+<p class="font-weight-light">En pedidos mayores a 2600 pesos</p>
+</div>
+
+
+<div class="" style="text-align:center; padding:1em; width:33%">
+<svg class="svg-inline--fa fa-w-16 fa-6x service-icon svg-icon-text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79.82 86" style="width:30%; height:1em"><path d="M40,86a1,1,0,0,1-.34-.06C8,74.58-1.59,35.33.32,16.84A1,1,0,0,1,.94,16L39.62.07a1.1,1.1,0,0,1,.76,0L79.06,16a1,1,0,0,1,.62.83C81.59,35.33,72,74.58,40.34,85.94A1,1,0,0,1,40,86ZM2.26,17.63C.67,35.75,10,72.92,40,83.94c30-11,39.33-48.19,37.74-66.31L40,2.08ZM33.1,58.69a1,1,0,0,1-.71-.29L16.78,42.85a1,1,0,1,1,1.41-1.42L33.1,56.28,64.19,25.44a1,1,0,0,1,1.41,1.42L33.8,58.4A1,1,0,0,1,33.1,58.69Z"></path></svg>
+<h3 class="service-title">Sitio seguro!</h3>
+<p class="font-weight-light">Certificado SSL</p>
+</div>
+
+</div>
+
 <!-- CAROUSEL/CUADRO CATEGORIAS -->
 
 <div class="categorias-container">
@@ -58,6 +80,8 @@
   </div>
 
 </div>
+
+
 
 <div class="container-productos-busqueda">
 
@@ -86,8 +110,8 @@
       <img class="imgproducto" src="{{Storage::url($product->img1)}}" alt="">
     </div>
     <div class="info-producto-container">
-      <h3>{{$product->productName}}</h3>
-      <p>{{$product->productDescription}}</p>
+      <h3>{{$product->productName}}  ${{$product->price}}</h3>
+      {{-- <p>{{$product->productDescription}}</p> --}}
       <a href="#"><button type="button" class="btn btn-info">Mas info</button></a>
       <a href="/product/addtocart/{{$product->id}}"><button type="button" class="btn btn-success"><i class="fas fa-shopping-cart navbutton" id="productCart"></i></button></a>
     </div>

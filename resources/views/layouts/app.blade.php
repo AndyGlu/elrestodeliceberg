@@ -169,7 +169,7 @@
       <!-- NAV BAR DESKTOP -->
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar-desktop">
-             <a href="/"><img id="icon23" class="iconoiceberg" src="images/iconIceberg.png" alt=""></a>
+             <a href="/"><img id="icon23" class="iconoiceberg" src={{ asset("/images/iconIceberg.png") }} alt=""></a>
           <a class="navbar-brand" href="/">El Resto del Iceberg</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

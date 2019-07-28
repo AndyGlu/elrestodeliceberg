@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('pageTitle', "$category->categoryName")
 @section('content')
 <head>
   <link href="{{ asset('css/categoryshow.css') }}" rel="stylesheet">
