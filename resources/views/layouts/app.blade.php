@@ -271,7 +271,7 @@
       <div class="row">
 
         <div class="col-md-6 mt-md-0 mt-3">
-     <a href="index.php"><img class="iconoiceberg" src="images/iconIceberg.png" alt=""></a>
+     <a href="/"><img class="iconoiceberg" src={{ asset("/images/iconIceberg.png") }} alt=""></a>
           <h5 class="text-uppercase">El Resto del Iceberg</h5>
           <p>Todo lo que no te cuentan, te lo contamos nosotros.</p>
 
