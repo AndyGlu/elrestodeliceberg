@@ -1,6 +1,10 @@
 @php
   use App\Product;
   use App\Category;
+  use App\Diet;
+  use App\Attribute;
+
+
   // $categories = Categories::all();
 @endphp
 <!DOCTYPE html>
@@ -178,7 +182,41 @@
           {{-- <ul class="navbar-nav mr-auto">
         <li class="nav-item active" id="categoria-menu"> --}}
 
-            @foreach (Category::all() as $category)
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: #66CCFF">
+            Categorías
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          @foreach (Category::all() as $category)
+            <a class="nav-link" href="/category/{{$category->id}}" name="category" style="text-align:center; text-decoration:none; color:black">{{$category->categoryName}}</a>
+          @endforeach
+        </div>
+        </div>
+
+        <div class="dropdown" style="padding-left:1em">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: #6666FF">
+            Dietas
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          @foreach (Diet::all() as $diet)
+            <a class="nav-link" href="/diet/{{$diet->id}}" name="diet" style="text-align:center; text-decoration:none; color:black">{{$diet->dietType}}</a>
+          @endforeach
+        </div>
+        </div>
+
+
+        <div class="dropdown" style="padding-left:1em">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: #6600FF">
+            Atributos
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          @foreach (Attribute::all() as $attribute)
+            <a class="nav-link" href="/attribute/{{$attribute->id}}" name="diet" style="text-align:center; text-decoration:none; color:black">{{$attribute->attributeName}}</a>
+          @endforeach
+        </div>
+        </div>
+
+            {{-- @foreach (Category::all() as $category)
             @if ($category->categoryName == "Frutos secos")
               <a class="nav-link" href="/category/{{$category->id}}" name="category" style="text-align:center; text-decoration:none; color:black">
         {{$category->categoryName}}
@@ -204,7 +242,7 @@
       {{$category->categoryName}}
     </a>
     @endif
-    @endforeach
+    @endforeach --}}
 
 
 
@@ -217,7 +255,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <form class="form-inline md-form form-sm mt-0">
             <i class="fas fa-search navbutton" aria-hidden="true"></i>
-            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Buscar" aria-label="Search">
           </form>
 
           <a class="nav-link dropdown-toggle busqueda navbutton" href="#" id="navbarDropdow" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
