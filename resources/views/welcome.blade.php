@@ -106,37 +106,52 @@
   <div class="container-productos">
 @foreach ($products as $product)
   <div class="producto">
+
     <div class="img-producto-container">
       <img class="imgproducto" src="{{Storage::url($product->img1)}}" alt="">
     </div>
     <div class="info-producto-container">
+
       <h3>{{$product->productName}}  ${{$product->price}}</h3>
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter{{$product->id}}">
         Mas Info
       </button>
       <!-- Modal -->
-      <div class="modal fade" id="exampleModalCenter{{$product->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal fade welcome" id="exampleModalCenter{{$product->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
-            <div class="modal-header">
+
+            <div class="modal-header welcome">
               <h5 class="modal-title" id="exampleModalLongTitle">{{$product->productName}}</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
-              <p>{{$product->productDescription}}</p>
+
+            <div class="modal-body welcome">
+
+              <div class="img-producto-container-welcome">
+              <img class="imgproducto" src="{{Storage::url($product->img1)}}" alt="">
+              </div>
+
+              <div class="descriptionModal">
+              <p class="proddescmodal">{{$product->productDescription}}</p>
+
+                <p class="prodpricemodal">Precio: <strong>{{$product->price}}</strong></p>
+
+                <a id="addtocartmodal" href="/product/addtocart/{{$product->id}}"><button type="button" class="btn btn-success"><i class="fas fa-shopping-cart navbutton" id="productCart"></i></button></a>
+              </div>
+
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              {{-- <button type="button" class="btn btn-primary">Save changes</button> --}}
-            </div>
+
+
           </div>
         </div>
       </div>
       <a href="/product/addtocart/{{$product->id}}"><button type="button" class="btn btn-success"><i class="fas fa-shopping-cart navbutton" id="productCart"></i></button></a>
-  <!-- Button trigger modal -->
+
   </div>
+
 </div>
 @endforeach
 
