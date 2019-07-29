@@ -51,8 +51,9 @@ class AttributeController extends Controller
      */
     public function show(Attribute $attribute)
     {
-        //
-    }
+      return view('attributeshow', [
+        'attribute' => $attribute
+      ]);    }
 
     /**
      * Show the form for editing the specified resource.

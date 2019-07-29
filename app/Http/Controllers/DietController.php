@@ -50,8 +50,9 @@ class DietController extends Controller
      */
     public function show(Diet $diet)
     {
-        //
-    }
+      return view('dietshow', [
+        'diet' => $diet
+      ]);    }
 
     /**
      * Show the form for editing the specified resource.

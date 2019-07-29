@@ -1,13 +1,15 @@
 @extends('layouts.app')
-@section('pageTitle', "$category->categoryName")
+@section('pageTitle', "$diet->dietType")
 @section('content')
+
 <head>
   <link href="{{ asset('css/categoryshow.css') }}" rel="stylesheet">
 </head>
-<h2 class="categorynametittle">{{$category->categoryName}}</h2>
+
+<h2 class="categorynametittle">{{$diet->dietType}}</h2>
 
 <div class="productcategory" style="margin: 0 auto">
-@foreach ($category->products as $product)
+@foreach ($diet->products as $product)
   <div class="producto" style="margin: 0 auto">
     <div class="img-producto-container" style="width: 100%; height: 60%;">
       <img class="imgproducto" src="{{Storage::url($product->img1)}}" alt="">
