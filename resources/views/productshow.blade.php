@@ -1,102 +1,85 @@
 @extends('layouts.app')
 @section('pageTitle', "$product->productName")
 @section('content')
+  <head>
+    <link href="{{ asset('css/indexstyles.css') }}" rel="stylesheet">
+  </head>
 
-<div class="card">
+<div class="card" style="overflow:hidden">
+  {{-- DIV IMAGEN --}}
+  <div class="" style="float:left">
+
 	<div class="row no-gutters">
-		<aside class="col-sm-5 border-right">
 <article class="gallery-wrap">
-<div class="img-big-wrap">
-  <div> <a href="images/items/1.jpg" data-fancybox=""><img src="images/items/1.jpg"></a></div>
-</div> <!-- slider-product.// -->
 <div class="img-small-wrap">
-  <div class="item-gallery"> <img src="{{Storage::url($product->img1)}}"></div>
-
+  <div class="item-gallery"> <img src="{{Storage::url($product->img1)}}" style="width:80%; height:80%">
 </div> <!-- slider-nav.// -->
+</div>
 </article> <!-- gallery-wrap .end// -->
-		</aside>
-		<aside class="col-sm-7">
+</div>
+</div>
+
+{{-- DIV INFO --}}
+	<div class="" style="float:left">
+
 <article class="p-5">
 	<h3 class="title mb-3">{{$product->productName}}</h3>
 
 <div class="mb-3">
 	<var class="price h3 text-warning">
-		<span class="currency">$</span><span class="num">{{$product->productName}}</span>
+		<span class="currency">$</span><span class="num">{{$product->price}}</span>
 	</var>
-	<span>/per kg</span>
 </div> <!-- price-detail-wrap .// -->
 <dl>
-  <dt>Description</dt>
-  <dd><p>Here goes description consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco </p></dd>
+  <dt>Descripción</dt>
+  <dd><p>{{$product->productDescription}}</p></dd>
 </dl>
 <dl class="row">
-  <dt class="col-sm-3">Model#</dt>
-  <dd class="col-sm-9">12345611</dd>
+  <dt class="col-sm-3">Categorías</dt>
+  <dd class="col-sm-9">ACA VAN LAS CATEGORIAS</dd>
 
-  <dt class="col-sm-3">Color</dt>
-  <dd class="col-sm-9">Black and white </dd>
+  <dt class="col-sm-3">Dietas</dt>
+  <dd class="col-sm-9">ACA VAN LAS DIETAS</dd>
 
-  <dt class="col-sm-3">Delivery</dt>
-  <dd class="col-sm-9">Russia, USA, and Europe </dd>
+  <dt class="col-sm-3">Atributos</dt>
+  <dd class="col-sm-9">ACA VAN LOS ATRIBUTOS</dd>
 </dl>
-<div class="rating-wrap">
 
-	<ul class="rating-stars">
-		<li style="width:80%" class="stars-active">
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i>
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i>
-			<i class="fa fa-star"></i>
-		</li>
-		<li>
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i>
-			<i class="fa fa-star"></i> <i class="fa fa-star"></i>
-			<i class="fa fa-star"></i>
-		</li>
-	</ul>
-	<div class="label-rating">132 reviews</div>
-	<div class="label-rating">154 orders </div>
-</div> <!-- rating-wrap.// -->
 <hr>
 	<div class="row">
 		<div class="col-sm-5">
 			<dl class="dlist-inline">
-			  <dt>Quantity: </dt>
+			  <dt>Cantidad: </dt>
 			  <dd>
 			  	<select class="form-control form-control-sm" style="width:70px;">
 			  		<option> 1 </option>
 			  		<option> 2 </option>
 			  		<option> 3 </option>
+            <option> 4 </option>
+            <option> 5 </option>
+            <option> 6 </option>
+            <option> 7 </option>
+            <option> 8 </option>
+            <option> 9 </option>            <option> 10 </option>
+
+
 			  	</select>
 			  </dd>
 			</dl>  <!-- item-property .// -->
 		</div> <!-- col.// -->
-		<div class="col-sm-7">
-			<dl class="dlist-inline">
-				  <dt>Size: </dt>
-				  <dd>
-				  	<label class="form-check form-check-inline">
-					  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-					  <span class="form-check-label">SM</span>
-					</label>
-					<label class="form-check form-check-inline">
-					  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-					  <span class="form-check-label">MD</span>
-					</label>
-					<label class="form-check form-check-inline">
-					  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-					  <span class="form-check-label">XXL</span>
-					</label>
-				  </dd>
-			</dl>  <!-- item-property .// -->
-		</div> <!-- col.// -->
-	</div> <!-- row.// -->
+</div>
+<div class="max-installments m-top-none d-inline">Hasta <strong class="js-installment-amount installment-amount">12</strong> cuotas</div>
+<br>
+<embed type="image/svg+xml" style="height:2em; width:2em" src="https://image.flaticon.com/icons/svg/349/349221.svg" />
+<embed type="image/svg+xml" style="height:2em; width:2em; padding:left 1em" src="https://image.flaticon.com/icons/svg/1148/1148069.svg" />
+<embed type="image/svg+xml" style="height:2em; width:2em; padding:left 1em" src="https://image.flaticon.com/icons/svg/179/179431.svg" />
+<embed type="image/svg+xml" style="height:2em; width:2em; padding:left 1em" src="https://image.flaticon.com/icons/svg/25/25246.svg" />
+<embed type="image/svg+xml" style="height:2em; width:2em; padding:left 1em" src="https://image.flaticon.com/icons/svg/138/138255.svg" />
+
 	<hr>
-	<a href="#" class="btn  btn-primary"> Buy now </a>
-	<a href="#" class="btn  btn-outline-primary"> <i class="fas fa-shopping-cart"></i> Add to cart </a>
+	<a href="#" class="btn  btn-primary"> Comprar </a>
+	<a href="#" class="btn  btn-outline-primary"> <i class="fas fa-shopping-cart"></i> Agregar al carrito </a>
 </article> <!-- card-body.// -->
-		</aside> <!-- col.// -->
-	</div> <!-- row.// -->
-</div> <!-- card.// -->
+  </div>
+
 @endsection

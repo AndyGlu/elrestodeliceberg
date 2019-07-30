@@ -14,16 +14,16 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active" "carousel CSS" style="background-image:url('images/Natural Food.jpg'); background-size:cover; background-position:center">
-        <img class="d-block w-100" id="img-carousel" src="" alt="">
+        <a href="/category/9">  <img class="d-block w-100" id="img-carousel" src="" alt=""></a>
       </div>
       <div class="carousel-item" style="background-image:url('images/nuts 1.jpg'); background-size:cover;">
-        <img class="d-block w-100" id="img-carousel" src="" alt="">
+      <a href="/category/11">  <img class="d-block w-100" id="img-carousel" src="" alt=""></a>
       </div>
       <div class="carousel-item" style="background-image:url('images/berries.jpg'); background-size:cover; background-position:center">
-        <img class="d-block w-100" id="img-carousel" src="" alt="">
+        <a href="/category/10"> <img class="d-block w-100" id="img-carousel" src="" alt=""></a>
       </div>
       <div class="carousel-item" style="background-image:url('images/miel-natural.jpg'); background-size:cover; background-position:center">
-        <img class="d-block w-100" id="img-carousel" src="" alt="">
+        <a href="/category/17">  <img class="d-block w-100" id="img-carousel" src="" alt=""></a>
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -110,11 +110,11 @@
   <div class="producto">
 
     <div class="img-producto-container">
-      <img class="imgproducto" src="{{Storage::url($product->img1)}}" alt="">
+    <a href="/productshow/{{$product->id}}">  <img class="imgproducto" src="{{Storage::url($product->img1)}}" alt=""></a>
     </div>
     <div class="info-producto-container">
 
-      <h3>{{$product->productName}}  ${{$product->price}}</h3>
+    <a style="color:black; text-decoration:none" href="/productshow/{{$product->id}}"> <h3>{{$product->productName}}  ${{$product->price}}</h3></a>
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter{{$product->id}}">
         Mas Info
       </button>
