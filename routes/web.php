@@ -23,7 +23,7 @@ Route::get('/', 'ProductController@index');
 Route::get('/create', 'ProductController@create');
 Route::post('/create', 'ProductController@store');
 Route::get('/productshow/{product}', 'ProductController@show');
-
+Route::get('/search/{search?}', 'ProductController@search');
 
 Route::get('/diet/{diet}', 'DietController@show');
 

@@ -7,6 +7,8 @@ use App\Diet;
 use App\Category;
 use App\Cart;
 use App\Attribute;
+use Illuminate\Support\Facades\DB;
+
 
 
 use Illuminate\Http\Request;
@@ -131,4 +133,19 @@ class ProductController extends Controller
     {
         //
     }
+
+    public function search($search)
+{
+  $diets = Diet::all();
+  $categories = Category::all();
+  $attributes = Attribute::all();
+
+  // $products = Product::all('products')->WHERE('productName', 'LIKE', "%$search%")->get();
+  $products = DB::table('products')->where('productName', 'like', "%$search%")->get();;
+
+  // dd($products);
+
+  return view('search', compact('products', 'categories', 'diets', 'attributes'));
+}
+
 }
