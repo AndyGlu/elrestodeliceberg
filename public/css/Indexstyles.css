@@ -46,6 +46,10 @@ nav#navbar-desktop{
   display: none;
 }
 
+input.enterSearch{
+  display: none;
+}
+
 /* CAROUSEL DE IMAGENES */
 
 img#img-carousel{
@@ -280,6 +284,40 @@ div.busqueda{
   display: flex;
   flex-direction: column;
   border-right: 1px solid lightgrey;
+}
+
+h4.filterTittle{
+  margin-top: 1em;
+}
+
+div.dietFilter{
+  display: flex;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+}
+
+div.attributeFilter{
+  display: flex;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+}
+
+p.dietCheck{
+  margin: 0;
+  margin-left: 0.3em;
+}
+
+p.attributeCheck{
+  margin: 0;
+  margin-left: 0.3em;
+}
+
+input.checkboxDiet{
+  align-self: center;
+}
+
+input.checkboxAttribute{
+  align-self: center;
 }
 
 /* PRODUCTOS */

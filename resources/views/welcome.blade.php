@@ -89,16 +89,18 @@
 
   <div class="busqueda">
   <h3>Búsqueda por filtros</h3>
-    <div class="dietFilter">
+  <h4 class="filterTittle">Dietas:</h4>
       @foreach ($diets as $diet)
-        <input type="checkbox" name="diets[]" value="{{$diet->id}}"><p>{{$diet->dietType}}</p>
+        <div class="dietFilter">
+        <input class="checkboxDiet" type="checkbox" name="diets[]" value="{{$diet->id}}"><p class="dietCheck">{{$diet->dietType}}</p>
+      </div>
       @endforeach
-    </div>
-    <div class="attributeFilter">
+      <h4 class="filterTittle">Attributos:</h4>
       @foreach ($attributes as $attribute)
-        <input type="checkbox" name="attributes[]" value="{{$attribute->id}}"><p>{{$attribute->attributeName}}</p>
+        <div class="attributeFilter">
+        <input class="checkboxAttribute" type="checkbox" name="attributes[]" value="{{$attribute->id}}"><p class="attributeCheck">{{$attribute->attributeName}}</p>
+      </div>
       @endforeach
-    </div>
   </div>
 
   <!-- PRODUCTOS -->
