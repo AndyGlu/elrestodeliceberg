@@ -9,8 +9,6 @@ use App\Cart;
 use App\Attribute;
 use Illuminate\Support\Facades\DB;
 
-
-
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -134,18 +132,25 @@ class ProductController extends Controller
         //
     }
 
-    public function search($search)
+    public function search()
 {
-  $diets = Diet::all();
-  $categories = Category::all();
-  $attributes = Attribute::all();
+  // $diets = Diet::all();
+  // $categories = Category::all();
+  // $attributes = Attribute::all();
 
   // $products = Product::all('products')->WHERE('productName', 'LIKE', "%$search%")->get();
-  $products = DB::table('products')->where('productName', 'like', "%$search%")->get();;
-
+  // $products = DB::table('products')->where('productName', 'like', "%$search%")->get();;
   // dd($products);
 
-  return view('search', compact('products', 'categories', 'diets', 'attributes'));
+  $products = Product::all();
+  if (isset($_GET['search'])) {
+    dd($_GET['search']);
+  }
+  // $search = $_GET['search'];
+  $products = Product::where('productName', 'like', '%%' )->get();
+
+  // return view('actores')->with('actores', $actores);
+  return view('search', compact('products', $products));
 }
 
 }
