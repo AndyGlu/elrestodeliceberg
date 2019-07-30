@@ -23,7 +23,11 @@ Route::get('/', 'ProductController@index');
 Route::get('/create', 'ProductController@create');
 Route::post('/create', 'ProductController@store');
 Route::get('/productshow/{product}', 'ProductController@show');
+<<<<<<< HEAD
 Route::get('/user', 'UserController@show');
+=======
+Route::get('/search/{search?}', 'ProductController@search');
+>>>>>>> 327af0bfe3cb6b06ca428e03357f502294eb73e2
 
 Route::get('/diet/{diet}', 'DietController@show');
 

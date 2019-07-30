@@ -253,9 +253,12 @@
 
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <form class="form-inline md-form form-sm mt-0">
+
+          <form class="form-inline md-form form-sm mt-0" action="/search/{search}">
+            @csrf
             <i class="fas fa-search navbutton" aria-hidden="true"></i>
-            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Buscar" aria-label="Search">
+            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Buscar" aria-label="">
+            <input type="submit" class="enterSearch" name="" value="">
           </form>
 
           <a class="nav-link dropdown-toggle busqueda navbutton" href="#" id="navbarDropdow" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
