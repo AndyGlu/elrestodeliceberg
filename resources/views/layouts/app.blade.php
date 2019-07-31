@@ -132,35 +132,35 @@
             @foreach (Category::all() as $category)
             @if ($category->categoryName == "Frutos secos")
               <li class="nav-item active" id="categoria-menu">
-                <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+                <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:#393D40">
               </li>
         {{$category->categoryName}}
       </a>
     @endif
     @if ($category->categoryName == "Especias")
       <li class="nav-item active" id="categoria-menu">
-        <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+        <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:#393D40">
       </li>
        {{$category->categoryName}}
     </a>
     @endif
     @if ($category->categoryName == "Harinas y avenas")
       <li class="nav-item active" id="categoria-menu">
-        <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+        <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:#393D40">
       </li>
       {{$category->categoryName}}
     </a>
     @endif
     @if ($category->categoryName == "Barras de cereal")
       <li class="nav-item active" id="categoria-menu">
-        <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+        <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:#393D40">
       </li>
       {{$category->categoryName}}
     </a>
     @endif
     @if ($category->categoryName == "Jugos y bebidas")
       <li class="nav-item active" id="categoria-menu">
-        <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:black">
+        <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:#393D40">
       </li>
       {{$category->categoryName}}
     </a>
@@ -183,35 +183,35 @@
         <li class="nav-item active" id="categoria-menu"> --}}
 
         <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: #66CCFF">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: #EE7500">
             Categorías
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           @foreach (Category::all() as $category)
-            <a class="nav-link" href="/category/{{$category->id}}" name="category" style="text-align:center; text-decoration:none; color:black">{{$category->categoryName}}</a>
+            <a class="nav-link" href="/category/{{$category->id}}" name="category" style="text-align:center; text-decoration:none; color:#393D40">{{$category->categoryName}}</a>
           @endforeach
         </div>
         </div>
 
         <div class="dropdown" style="padding-left:1em">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: #6666FF">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: #D69764">
             Dietas
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           @foreach (Diet::all() as $diet)
-            <a class="nav-link" href="/diet/{{$diet->id}}" name="diet" style="text-align:center; text-decoration:none; color:black">{{$diet->dietType}}</a>
+            <a class="nav-link" href="/diet/{{$diet->id}}" name="diet" style="text-align:center; text-decoration:none; color:#393D40">{{$diet->dietType}}</a>
           @endforeach
         </div>
         </div>
 
 
         <div class="dropdown" style="padding-left:1em">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: #6600FF">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: #EE7500">
             Atributos
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           @foreach (Attribute::all() as $attribute)
-            <a class="nav-link" href="/attribute/{{$attribute->id}}" name="diet" style="text-align:center; text-decoration:none; color:black">{{$attribute->attributeName}}</a>
+            <a class="nav-link" href="/attribute/{{$attribute->id}}" name="diet" style="text-align:center; text-decoration:none; color:#393D40">{{$attribute->attributeName}}</a>
           @endforeach
         </div>
         </div>

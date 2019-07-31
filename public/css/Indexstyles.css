@@ -17,14 +17,18 @@ a{
  color: none;
 }
 
+
 /* BODY */
+body{
+  background-color: #FFFFFF;
+}
 
 /* HABRIA QUE PONERLE ALGUN FONDO COPADO NO? */
 
 /* NAV BAR 1 */
 
 .navbutton{
-  color: black;
+  color: #393D40;
 }
 
 nav.la-de-arriba{
@@ -64,7 +68,7 @@ div.categorias-container{
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 2em 0em;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
 div.categoria{
@@ -122,7 +126,7 @@ img.imgproducto{
 }
 
 i#productCart{
-  color: white;
+  color: #FFFFFF;
 }
 
 
@@ -144,12 +148,12 @@ div.busqueda{
 
 footer{
   border-top: 1px solid lightgrey;
-  background-color: rgb(228, 251, 251);
+  background-color: #FFFFFF;
 }
 
 .footerlinks{
   text-decoration: none;
-  color: black;
+  color: #393D40;
 }
 
 .login1{
@@ -246,7 +250,7 @@ div.dropdown-menu.user-desktop{
 }
 
 a.nav-link.cateoria-navibar{
-  color: #888888;
+  color: #636363;
 }
 
 #logoutbutton{
@@ -389,6 +393,8 @@ div.container-productos{
 div.producto{
   width: 30%;
   margin: 1em auto;
+  background-color: #FFFFFF;
+  border-radius: 1em;
 }
 
 div.producto{

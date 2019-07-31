@@ -94,6 +94,9 @@
   <div class="busqueda">
     <form class="" action="{{ url('/') }}" method="get">
   <h3>Búsqueda por filtros</h3>
+  <br>
+<button type="submit" class="btn btn-outline-warning">Aplicar</button>
+
   <h4 class="filterTittle">Dietas:</h4>
       @foreach ($diets as $diet)
         <div class="dietFilter">
@@ -109,7 +112,8 @@
         <p class="attributeCheck">{{$attribute->attributeName}}</p>
       </div>
       @endforeach
-      <button type="submit" name="button">Filtrar</button>
+      <br>
+      <button type="submit" class="btn btn-outline-warning">Aplicar</button>
     </form>
   </div>
 

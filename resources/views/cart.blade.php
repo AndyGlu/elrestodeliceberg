@@ -32,7 +32,9 @@
     @csrf <!--Capa de seguridad Obligatoria para Laravel-->
     {{ method_field('DELETE') }}
     <!-- lo de arriba equivale a <input type="hidden" name="_method" value= "delete" > -->
-    <button type="submit" class="btn btn-light buttonDelete" value="Eliminar producto">Eliminar</button>
+    <button type="submit" class="btn btn-light buttonDeleteDesk" value="Eliminar producto">Eliminar</button>
+    <button type="submit" class="btn btn-light buttonDelete" value="Eliminar producto">X</button>
+
     {{-- <input type="submit" name="" value="Eliminar producto"> --}}
   </form>
 </div>
@@ -41,8 +43,11 @@
           <p>El carrito esta vacío</p>
         @endforelse
 
+        <h6>Total:</h6> 
+<br>
 <a href="/" class="btn btn-primary coprarButton">Comprar</a>
 </div>
+<br>
 @endsection
 
 <script src="/js/main.js"></script>

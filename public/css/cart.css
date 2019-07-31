@@ -17,7 +17,7 @@ div.cartProductsContainer{
   align-items: center;
   flex-wrap: nowrap;
   justify-content: space-around;
-  background-color: rgb(228, 251, 251);
+  background-color: #F1EDEA;
   border-radius: 2em;
   width: 80%;
   margin-bottom: 1%;
@@ -73,8 +73,14 @@ form.deleteButton{
 div.deleteProdButton{
 width: 5%;
 margin: 0px;
-margin-right: 2.5%;
+margin-right: 3em;
 }
+
+button.btn.btn-light.buttonDeleteDesk{
+  color: white;
+  background-color: #D69764;
+}
+
 
 button.btn.btn-light.buttonDelete:hover{
   color: white;
@@ -83,5 +89,77 @@ button.btn.btn-light.buttonDelete:hover{
 
 a.btn.btn-primary.coprarButton{
   align-self: flex-start;
-  margin-left: 8%;
+  margin-left: 70%;
+  background-color: #EE7500;
+}
+
+.buttonDelete{
+  display: none;
+}
+
+@media(max-width: 992px){
+
+  div.deleteProdButton{
+  margin-right: 2.5%;
+  }
+
+  div.cartProductsContainer{
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background-color: #F1EDEA;
+    border-radius: 2em;
+    width: 96%;
+    margin-bottom: 1%;
+  }
+
+  div.forelsecontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1%;
+    width: 96%;
+    margin: 0 auto;
+  }
+
+h5{
+  font-size: 0.7em;
+}
+
+img.cartprodimg{
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  padding: 0.2em;
+}
+
+form.cantasegurar{
+  margin: 0px;
+  width: 2em;
+}
+
+
+p.productPrice{
+  margin-left: 0.2em;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+.buttonDelete{
+  color: white;
+  background-color: #D69764;
+  display:block;
+  font-size: 0.4em;
+}
+
+button.btn.btn-light.buttonDeleteDesk{
+display: none;
+}
+
+div.priceShower{
+  /* margin:0 auto; */
+}
+
 }
