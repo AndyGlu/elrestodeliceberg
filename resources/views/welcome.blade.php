@@ -38,7 +38,7 @@
 </div>
 
 {{-- DIV DE ICONOS DESK + ICONOS MOBILE --}}
-<div class="">
+<div class="" style="margin-top:2em; margin-bottom:2em">
 
 <div class="contenedor-iconosbajocarousel" >
 <div class="contenedor-iconosbajocarousel-cadaicono">
