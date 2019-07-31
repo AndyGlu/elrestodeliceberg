@@ -86,7 +86,13 @@ class CartController extends Controller
     {
       $userLogueado =  Auth::user()->id;
       $cart = Cart::where('user_id','=',$userLogueado)->where('status','=', 0)->get();
-      return view('cart', compact('cart'));
+
+      $total = $cart->reduce(function($suma, $item){
+        $suma += $item->price * $item->cant;
+        return $suma;
+      });
+
+      return view('cart', compact('cart', 'total'));
     }
 
     /**

@@ -19,13 +19,12 @@
           <form class="cantasegurar" action="/cart/{{$item->id}}" method="post">
               @csrf
               <div class="contadorCant">
-                <input type="number" id="cant-product" name="cant" value="{{$item->cant}}"  min="1" max="10">
+                <input class='quantity' type="number" id="cant-product" name="cant" value="{{$item->cant}}"  min="1" max="10">
+                <p class="productPrice">${{$item->price}}</p>
+                <p class='totalItemPrice'>${{$item->price * $item->cant}}</p>
               </div>
           </form>
 
-          <div class="priceShower">
-            <p class="productPrice">${{$item->price}}</p>
-          </div>
 
 <div class="deleteProdButton">
   <form class="deleteButton" action="/cart/{{$item->id}}" method="post">
@@ -43,12 +42,12 @@
           <p>El carrito esta vacío</p>
         @endforelse
 
-        <h6>Total:</h6> 
+        <h6 class='total'>Total: {{$total}}</h6>
 <br>
 <a href="/" class="btn btn-primary coprarButton">Comprar</a>
 </div>
 <br>
 @endsection
 
-<script src="/js/main.js"></script>
+<script src="/js/cart.js"></script>
 </body>
