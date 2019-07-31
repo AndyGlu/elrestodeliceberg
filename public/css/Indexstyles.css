@@ -125,6 +125,15 @@ i#productCart{
   color: white;
 }
 
+
+div.productcategory{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.producto{
+  padding: 1em;
+}
 /* BUSQUEDA IZQUIERDA */
 
 div.busqueda{

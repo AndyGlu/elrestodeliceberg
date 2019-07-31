@@ -36,7 +36,6 @@
     <div class="info-producto-container">
       <a style="color:black; text-decoration:none" href="/productshow/{{$product->id}}"> <h3>{{$product->productName}}</h3></a>
       <p style="margin: 0;"><strong>${{$product->price}}</strong></p>
-      <p>{{$product->productDescription}}</p>
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter{{$product->id}}">
         Mas Info
       </button>
