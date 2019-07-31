@@ -144,9 +144,10 @@ class ProductController extends Controller
   $search = $_GET['search'];
   $queryProductos = Product::where('productName', 'like', "%$search%" )->get();
   $queryDietas = Diet::where('dietType', 'like', "%$search%" )->get();
+  $queryAtributos = Attribute::where('attributeName', 'like', "%$search%" )->get();
 
   // return view('actores')->with('actores', $actores);
-  return view('search', compact('queryProductos', 'queryDietas'));
+  return view('search', compact('queryProductos', 'queryDietas', 'queryAtributos'));
 }
 
 }
