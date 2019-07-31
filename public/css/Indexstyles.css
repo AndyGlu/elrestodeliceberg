@@ -181,6 +181,15 @@ width:30%;
 height:1em
 }
 
+.productshowcontainer{
+  margin-left: auto;
+   margin-right: auto;
+ }
+
+.productshowimagen{
+  width:80%;
+  height: 80%;
+}
 /* RESOLUCION DE PANTALLA DESKTOP = 992px */
 
 @media(min-width: 992px){
@@ -388,6 +397,23 @@ footer{
   border-top: 1px solid lightgrey;
   margin-top: 2em;
 }
+
+.productshowcontainer{
+  display:flex;
+}
+
+.containercantpago{
+  display:flex;
+}
+
+.opcion1{
+  width: 60%
+}
+
+.opcion2{
+  width: 40%
+}
+
 }
 
 

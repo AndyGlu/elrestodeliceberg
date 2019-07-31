@@ -56,6 +56,26 @@ class CartController extends Controller
         return redirect('/');
     }
 
+    public function store2($id)
+    {
+      //para que agrege al carrito debo antes estar logueado,use middleware(auth) corre bien:)
+        $product = Product::find($id);
+
+        $userLogueado =  Auth::user()->id; //traer usuario que esta comprando.
+
+        $cart = new Cart;
+
+        $cart->name = $product->productName;
+        $cart->description = $product->productDescription;
+        $cart->price = $product->price;
+        $cart->featured_img = $product->img1;
+        $cart->cant = 1;
+        $cart->user_id = $userLogueado;
+
+        $cart->save();
+
+        return redirect('/cart');
+    }
     /**
      * Display the specified resource.
      *

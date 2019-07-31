@@ -45,6 +45,8 @@ Route::get('/createCat', 'CategoryController@create');
 Route::post('/createCat', 'CategoryController@store');
 
 Route::get('/cart', 'CartController@show')->middleware('auth');
+Route::get('/product/buycart/{id}', 'CartController@store2')->middleware('auth');
+
 Route::post('/cart/{id}', 'CartController@update');
 Route::delete('/cart/{id}', 'CartController@destroy');
 
