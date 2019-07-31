@@ -86,9 +86,11 @@
 
        <div class="dropdown-menu busqueda-primer-navibar navbutton" aria-labelledby="navbarDropdown">
         <div class="dropdown-item">
-          <form class="form my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Búsqueda" aria-label="Search">
+
+          <form class="form my-2 my-lg-0" action="/search" method="get">
+            <input name="search" class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="" value="">
           </form>
+
         </div>
       </div>
       <li class="nav-item dropdown" id="user">
@@ -266,8 +268,8 @@
 
           <div class="dropdown-menu busqueda-navibar-desktop navbutton" aria-labelledby="navbarDropdown">
             <div class="dropdown-item">
-              <form class="form my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Búsqueda" aria-label="Search">
+              <form class="form my-2 my-lg-0" action="/search" method="get">
+                <input name="search" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="" value="">
               </form>
             </div>
           </div>
