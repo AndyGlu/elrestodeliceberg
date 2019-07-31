@@ -4,7 +4,7 @@
 
 
 <!-- CARROUSEL IMAGENES -->
-
+</div>
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -36,6 +36,9 @@
     </a>
   </div>
 </div>
+
+{{-- DIV DE ICONOS DESK + ICONOS MOBILE --}}
+<div class="">
 
 <div class="contenedor-iconosbajocarousel" >
 <div class="contenedor-iconosbajocarousel-cadaicono">
@@ -80,7 +83,8 @@
   </div>
 
 </div>
-
+</div>
+{{-- FIN DIV ICONOS DESK + ICONOS MOBILE --}}
 
 
 <div class="container-productos-busqueda">
