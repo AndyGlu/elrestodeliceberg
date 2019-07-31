@@ -184,7 +184,7 @@
           {{-- <ul class="navbar-nav mr-auto">
         <li class="nav-item active" id="categoria-menu"> --}}
 
-        <div class="dropdown">
+        <div class="dropdown" style="margin-left:2em">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: #EE7500">
             Categorías
           </button>
@@ -357,9 +357,15 @@
     </div>
     <!-- Subscripción al newsletter -->
     <form class="text-center border border-light">
-      <small id="emailHelp" class="form-text text-muted"> Suscribite a nuestro newsletter para recibir las ofertas más piolas </small>
-      <input type="email" id="defaultSubscriptionFormEmail" class="form-control mb-4" placeholder="Correo electrónico">
-      <button class="btn btn-info btn-block" type="submit">Suscribirse</button>
+    <div class="">
+    <small id="emailHelp" class="form-text text-muted"> Suscribite a nuestro newsletter para recibir las ofertas más piolas </small>
+      <small id="emailHelp" class="form-text text-muted"> </small>
+      </div>
+      <div class="" style="display:flex">
+
+      <input type="email" id="defaultSubscriptionFormEmail" class="form-control mb-4" placeholder="Correo electrónico" style="width:30%; margin-left:13em">
+      <button class="btn btn-info btn-block" type="submit" style="width:30%; height:2.4em; margin-left:2em">Suscribirse</button>
+    </div>
     </form>
 
       <!-- Copyright -->
