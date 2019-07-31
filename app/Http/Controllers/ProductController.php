@@ -138,19 +138,15 @@ class ProductController extends Controller
   // $categories = Category::all();
   // $attributes = Attribute::all();
 
-  // $products = Product::all('products')->WHERE('productName', 'LIKE', "%$search%")->get();
-  // $products = DB::table('products')->where('productName', 'like', "%$search%")->get();;
-  // dd($products);
-
-  $products = Product::all();
-  if (isset($_GET['search'])) {
-    dd($_GET['search']);
-  }
-  // $search = $_GET['search'];
-  $products = Product::where('productName', 'like', '%%' )->get();
+  // if (isset($_GET['search'])) {
+  //   dd($_GET['search']);
+  // }
+  $search = $_GET['search'];
+  $queryProductos = Product::where('productName', 'like', "%$search%" )->get();
+  $queryDietas = Diet::where('dietType', 'like', "%$search%" )->get();
 
   // return view('actores')->with('actores', $actores);
-  return view('search', compact('products', $products));
+  return view('search', compact('queryProductos', 'queryDietas'));
 }
 
 }

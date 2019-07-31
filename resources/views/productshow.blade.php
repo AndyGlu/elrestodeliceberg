@@ -78,7 +78,7 @@
 
 	<hr>
 	<a href="#" class="btn  btn-primary"> Comprar </a>
-	<a href="#" class="btn  btn-outline-primary"> <i class="fas fa-shopping-cart"></i> Agregar al carrito </a>
+	<a href="/product/addtocart/{{$product->id}}" class="btn  btn-outline-primary"> <i class="fas fa-shopping-cart"></i> Agregar al carrito </a>
 </article> <!-- card-body.// -->
   </div>
 

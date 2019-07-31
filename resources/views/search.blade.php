@@ -5,7 +5,7 @@
 <h2>Resultado</h2>
 
 <div class="productcategory">
-@foreach ($products as $product)
+@forelse ($queryProductos as $product)
   <div class="producto">
     <div class="img-producto-container">
       <img class="imgproducto" src="{{Storage::url($product->img1)}}" alt="">
@@ -17,6 +17,22 @@
       <a href="/product/addtocart/{{$product->id}}"><button type="button" class="btn btn-success"><i class="fas fa-shopping-cart navbutton" id="productCart"></i></button></a>
     </div>
   </div>
-@endforeach
+@empty
+  <p>Sin resultados en Productos</p>
+@endforelse
 </div>
+<div class="dietResult">
+@forelse ($queryDietas as $diet)
+  <div class="diet">
+    <div class="dietResultInfo">
+      <h3>{{$diet->dietType}}</h3>
+      <p>{{$diet->dietDescription}}</p>
+      href="/diet/{{$diet->id}}"
+    </div>
+  </div>
+@empty
+  <p>Sin resultados en Dietas</p>
+@endforelse
+</div>
+
 @endsection
