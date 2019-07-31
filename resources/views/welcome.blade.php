@@ -92,19 +92,25 @@
   <!-- FILTROS -->
 
   <div class="busqueda">
+    <form class="" action="{{ url('/') }}" method="get">
   <h3>Búsqueda por filtros</h3>
   <h4 class="filterTittle">Dietas:</h4>
       @foreach ($diets as $diet)
         <div class="dietFilter">
-        <input class="checkboxDiet" type="checkbox" name="diets[]" value="{{$diet->id}}"><p class="dietCheck">{{$diet->dietType}}</p>
+        <input class="checkboxDiet" type="checkbox" name="diets[]" value="{{$diet->id}}" {{ in_array($diet->id, request('diets') ?? []) ? 'checked' : '' }}><p class="dietCheck">{{$diet->dietType}}</p>
       </div>
       @endforeach
       <h4 class="filterTittle">Attributos:</h4>
       @foreach ($attributes as $attribute)
         <div class="attributeFilter">
-        <input class="checkboxAttribute" type="checkbox" name="attributes[]" value="{{$attribute->id}}"><p class="attributeCheck">{{$attribute->attributeName}}</p>
+        <input
+          class="checkboxAttribute" type="checkbox" name="attributes[]"
+          value="{{$attribute->id}}" {{ in_array($attribute->id, request('attributes') ?? []) ? 'checked' : '' }}>
+        <p class="attributeCheck">{{$attribute->attributeName}}</p>
       </div>
       @endforeach
+      <button type="submit" name="button">Filtrar</button>
+    </form>
   </div>
 
   <!-- PRODUCTOS -->

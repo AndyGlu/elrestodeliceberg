@@ -9,7 +9,10 @@ class Product extends Model
     public $guarded = [];
 
 public function attributes(){
-  return $this->belongsToMany('\App\attribute');
+  return $this->belongsToMany('\App\Attribute');
+}
+public function attrs(){
+  return $this->belongsToMany('\App\Attribute');
 }
 public function diets(){
   return $this->belongsToMany('\App\diet');

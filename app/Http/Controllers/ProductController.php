@@ -18,9 +18,23 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-      $products = Product::all();
+      $products = Product::query();
+
+      if ($request->has('diets')) {
+        $products->whereHas('diets', function ($q) use ($request) {
+          return $q->whereIn('diets.id', $request->get('diets'));
+        });
+      }
+
+      if ($request->has('attributes')) {
+        $products->whereHas('attributes', function ($q) use ($request) {
+          return $q->whereIn('attributes.id', $request->get('attributes'));
+        });
+      }
+
+      $products = $products->paginate(10);
       $categories = Category::all();
       $diets = Diet::all();
       $attributes = Attribute::all();
