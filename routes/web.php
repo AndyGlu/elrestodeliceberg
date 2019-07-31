@@ -24,10 +24,8 @@ Route::get('/create', 'ProductController@create');
 Route::post('/create', 'ProductController@store');
 Route::get('/productshow/{product}', 'ProductController@show');
 Route::get('/user', 'UserController@show');
-// <<<<<<< HEAD
-// =======
-// Route::get('/search/{search?}', 'ProductController@search');
-// >>>>>>> 327af0bfe3cb6b06ca428e03357f502294eb73e2
+Route::get('/search', 'ProductController@search');
+
 
 Route::get('/diet/{diet}', 'DietController@show');
 
