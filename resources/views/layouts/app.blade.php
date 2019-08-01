@@ -24,7 +24,7 @@
   </head>
   <body>
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
     <div class="container-index">
       {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">

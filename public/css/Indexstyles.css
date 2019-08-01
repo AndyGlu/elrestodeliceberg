@@ -132,8 +132,7 @@ div.container-productos{
 
 div.producto{
   display: flex;
-  width: 40%;
-  margin: 1em auto;
+  width: 50%;
   flex-direction: column;
 }
 
@@ -144,7 +143,7 @@ div.img-producto-container{
 
 img.imgproducto{
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
 }
 
 i#productCart{
@@ -322,8 +321,8 @@ div.container-productos-busqueda{
 /* FILTROS */
 
 div.busqueda{
-  margin: 0 auto;
-  margin-left: 2em;
+  margin-left: 1em;
+  padding-right: 1em;
   width: 17%;
   display: flex;
   flex-direction: column;
@@ -385,6 +384,11 @@ div.img-producto-container-welcome{
   height: 20em;
 }
 
+div.img-producto-container{
+  display: flex;
+  width: 100%;
+}
+
 div.descriptionModal{
   display: flex;
   flex-direction: column;
@@ -435,7 +439,7 @@ div.producto{
 
 img.imgproducto{
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
 }
 
 footer{
