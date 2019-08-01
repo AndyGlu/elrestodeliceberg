@@ -37,8 +37,15 @@ a{
 
 div#loginauth{
   margin-top: 2em;
+  margin-bottom: 1em;
 }
 
 div#registerauth{
   margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+button.btn.btn-light.btn-sm.registrateAqui{
+  margin-top: 1em;
+  margin-left: 17em;
 }
