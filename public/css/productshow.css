@@ -1,0 +1,40 @@
+div.productshowelemento{
+  overflow: auto;
+}
+
+div.overflow{
+  overflow: hidden;
+}
+
+div.row.adc-shower{
+   display: flex;
+   flex-direction: column;
+}
+
+div.adc{
+  display: flex;
+  font-size: 0.8
+}
+
+p.tittleadc{
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+p.adcC{
+  margin: 0px;
+  width: 10em;
+  font-size: 0.8em;
+}
+
+p.adcD{
+  margin: 0px;
+  width: 10em;
+  font-size: 0.8em;
+}
+
+p.adcA{
+  margin: 0px;
+  width: 8em;
+  font-size: 0.8em;
+}

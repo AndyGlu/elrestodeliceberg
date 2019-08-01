@@ -3,6 +3,7 @@
 @section('content')
   <head>
     <link href="{{ asset('css/indexstyles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/productshow.css') }}" rel="stylesheet">
   </head>
 
 <div class="productshowcontainer" style="">
@@ -34,16 +35,27 @@
   <dt>Descripción</dt>
   <dd><p>{{$product->productDescription}}</p></dd>
 </dl>
-<dl class="row">
-  <dt class="col-sm-3">Categorías</dt>
-  <dd class="col-sm-9">ACA VAN LAS CATEGORIAS</dd>
 
-  <dt class="col-sm-3">Dietas</dt>
-  <dd class="col-sm-9">ACA VAN LAS DIETAS</dd>
+<div class="row adc-shower">
+  <div class="adc">
+    <p class="tittleadc"><strong>Categoría:</strong></p>
+      <p class="adcC">{{$product}}</p> <?php // TODO: ¿COMO HAGO LA RELCION CON LA CATEGORÍA? ?>
+  </div>
 
-  <dt class="col-sm-3">Atributos</dt>
-  <dd class="col-sm-9">ACA VAN LOS ATRIBUTOS</dd>
-</dl>
+  <div class="adc">
+    <p class="tittleadc"><strong>Dietas:</strong></p>
+    @foreach ($product->diets as $diet)
+      <p class="adcD">{{$diet->dietType}}</p>
+    @endforeach
+  </div>
+
+  <div class="adc">
+    <p class="tittleadc"><strong>Atributos:</strong></p>
+    @foreach ($product->attributes as $attribute)
+      <p class="adcA">{{$attribute->attributeName}}</p>
+    @endforeach
+  </div>
+</div>
 
 <hr>
 	<div class=" containercantpago" >

@@ -107,9 +107,14 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
+      $diets = Diet::all();
+      $categories = Category::all();
+      $attributes = Attribute::all();
+      $products = Product::all();
+
       return view('productshow', [
         'product' => $product
-      ]);
+      ], compact('categories'));
     }
 
     /**
