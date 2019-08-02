@@ -67,3 +67,29 @@ p.adcA{
   border-radius: 10%;
   background-color: #F1EDEA;
 }
+
+article.article{
+  display: none;
+}
+
+@media(max-width: 992px){
+
+  article.p-5{
+    display: none;
+  }
+
+  article.article{
+    display: block;
+    padding: 2em;
+  }
+
+  div.productshowelemento2{
+    margin: 0;
+  }
+
+  div.adc{
+    display: block;
+  }
+
+
+}
