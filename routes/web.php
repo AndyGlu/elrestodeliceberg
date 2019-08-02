@@ -52,3 +52,4 @@ Route::post('/cart/{id}', 'CartController@update')->middleware('auth');;
 Route::delete('/cart/{id}', 'CartController@destroy')->middleware('auth');;
 Route::get('/product/addtocart/{id}', 'CartController@store')->middleware('auth');
 Route::get('/purchase', 'CartController@showforpurchase')->middleware('auth');
+Route::get('/cartfinish', 'CartController@destroycart')->middleware('auth');

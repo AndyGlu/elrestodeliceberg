@@ -18,6 +18,7 @@
       <div class="totalticket">
         <p><strong>Total:</strong></p><p><strong>${{$total}}</strong></p>
       </div>
+      <a href="/cartfinish"><button type="button" class="btn btn-success">Finalizar compra</button></a>
     </ul>
   </div>
 </body>

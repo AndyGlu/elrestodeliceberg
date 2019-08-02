@@ -135,6 +135,18 @@ class CartController extends Controller
       return redirect('/cart');
     }
 
+    public function destroycart()
+    {
+      $cart = Cart::all();
+      // dd($cart);
+      foreach ($cart as $id) {
+        $id->delete();
+      }
+
+      // flash('Su compra a sido realizada con exito');
+      return redirect('/');
+    }
+
     public function buy(){
 //darle a todas las compras un id_carrito incremental al anterior
     //campiarle a todos estos el estado a 1(comprado)
