@@ -377,7 +377,7 @@
     </form>
 
       <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+  <div class="footer-copyright text-center">© 2019 Copyright:
     <p href="https://elrestodeliceberg.com/"> El Resto Del Iceberg®</p>
   </div>
   <!-- Default form subscription -->
