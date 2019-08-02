@@ -8,20 +8,76 @@
 
 <div class="productshowcontainer" style="">
   {{-- DIV IMAGEN --}}
-  <div class="productshowelemento" style="">
+  <div class="productshowelemento1" style="">
 
 	<div class="row no-gutters">
-<article class="gallery-wrap">
-<div class="img-small-wrap">
-  <div class="item-gallery productshowimagen" > <img src="{{Storage::url($product->img1)}}" style="width:100%; height:100%">
-</div> <!-- slider-nav.// -->
+<article class="gallery-wrap ">
+{{--  --}}
+{{--  --}}
+@if ($product->img2 && $product->img3)
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner img-small-wrap">
+    <div class="carousel-item active item-gallery productshowimagen" >
+<img src="{{Storage::url($product->img1)}}" style="width:100%; height:100%">
 </div>
+    <div class="carousel-item item-gallery productshowimagen">
+<img src="{{Storage::url($product->img2)}}" style="width:100%; height:100%">
+</div>
+    <div class="carousel-item item-gallery productshowimagen">
+<img src="{{Storage::url($product->img3)}}" style="width:100%; height:100%">
+</div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Siguiente</span>
+  </a>
+</div>
+@elseif ($product->img2 && !$product->img3)
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner img-small-wrap">
+      <div class="carousel-item active item-gallery productshowimagen">
+  <img src="{{Storage::url($product->img1)}}" style="width:100%; height:100%">
+  </div>
+      <div class="carousel-item item-gallery productshowimagen">
+  <img src="{{Storage::url($product->img2)}}" style="width:100%; height:100%">
+  </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </div>
+@else
+  <div class="img-small-wrap">
+    <div class="item-gallery productshowimagen" > <img src="{{Storage::url($product->img1)}}" style="width:100%; height:100%">
+    </div> <!-- slider-nav.// -->
+</div>
+@endif
 </article> <!-- gallery-wrap .end// -->
 </div>
 </div>
 
 {{-- DIV INFO --}}
-	<div class="productshowelemento" style="">
+	<div class="productshowelemento2" style="">
 
 <article class="p-5">
 	<h3 class="title mb-3">{{$product->productName}}</h3>
