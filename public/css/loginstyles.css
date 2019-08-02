@@ -35,6 +35,17 @@ a{
   display: inline-block;
 }
 
+button.btn.btn-primary{
+  background-color: #D69764;
+  border: solid 1px #D69764;
+}
+
+button.btn.btn-primary:hover{
+  background-color: #F1EDEA;
+  border: solid 1px #F1EDEA;
+  color: black;
+}
+
 div#loginauth{
   margin-top: 2em;
   margin-bottom: 1em;
