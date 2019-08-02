@@ -46,7 +46,7 @@
 
         <h6 class='total'>Total: {{$total}}</h6>
 <br>
-<a href="/" class="btn btn-primary coprarButton">Comprar</a>
+<a href="/purchase" class="btn btn-primary coprarButton">Comprar</a>
 </div>
 <br>
 @endsection

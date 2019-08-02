@@ -45,6 +45,8 @@ img.cartprodimg{
 
 form.cantasegurar{
   margin: 0px;
+  display: flex;
+  flex-direction: row;
 }
 
 div.contadorCant{

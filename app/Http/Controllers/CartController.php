@@ -151,4 +151,16 @@ class CartController extends Controller
 //por javascript se le debe mostrar un resumen de todo el carrito en simples filas(opcional)
      return redirect('/welcome');
     }
+
+    public function showforpurchase(){
+      $userLogueado =  Auth::user()->id;
+      $cart = Cart::where('user_id','=',$userLogueado)->where('status','=', 0)->get();
+
+      $total = $cart->reduce(function($suma, $item){
+        $suma += $item->price * $item->cant;
+        return $suma;
+      });
+
+      return view('purchase', compact('cart', 'total'));
+    }
 }

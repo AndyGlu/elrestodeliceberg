@@ -9,7 +9,8 @@ window.addEventListener('load', function(){
 
     input.addEventListener('change', function(){
       var totalItemPrice = parseInt(priceSanitize) * this.value;
-      this.lastChild.innerText = '$' + totalItemPrice;
+      console.log(this.lastChild);
+      this.nextSibling.nextSibling.innerText = '$' + totalItemPrice;
 
       //console.log(Array.from(document.querySelectorAll('.productPrice')));
       var total = Array.from(document.querySelectorAll('.productPrice')).reduce(function(totalPrice, itemPrice){
