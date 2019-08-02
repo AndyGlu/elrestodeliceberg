@@ -93,23 +93,23 @@
 </dl>
 
 <div class="row adc-shower">
-  <div class="adc">
-    <p class="tittleadc"><strong>Categoría:</strong></p>
-      <p class="adcC">{{$product}}</p> <?php // TODO: ¿COMO HAGO LA RELCION CON LA CATEGORÍA? ?>
-  </div>
 
   <div class="adc">
     <p class="tittleadc"><strong>Dietas:</strong></p>
-    @foreach ($product->diets as $diet)
-      <p class="adcD">{{$diet->dietType}}</p>
-    @endforeach
+    <div class="adcseparator">
+      @foreach ($product->diets as $diet)
+      <a href="/diet/{{$diet->id}}"> <p class="adcD">{{$diet->dietType}}</p></a>
+      @endforeach
+    </div>
   </div>
 
   <div class="adc">
     <p class="tittleadc"><strong>Atributos:</strong></p>
+    <div class="adcseparator">
     @foreach ($product->attributes as $attribute)
-      <p class="adcA">{{$attribute->attributeName}}</p>
+      <a href="/attribute/{{$attribute->id}}"> <p class="adcD">{{$attribute->attributeName}}</p></a>
     @endforeach
+  </div>
   </div>
 </div>
 

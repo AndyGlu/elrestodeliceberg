@@ -25,28 +25,45 @@ div.row.adc-shower{
 
 div.adc{
   display: flex;
-  font-size: 0.8
+  font-size: 0.8;
+  width: 100%;
+  margin-left: 1em;
+}
+
+div.adcseparator{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 p.tittleadc{
-  margin-left: 1em;
   margin-right: 1em;
 }
 
-p.adcC{
-  margin: 0px;
-  width: 10em;
-  font-size: 0.8em;
-}
-
 p.adcD{
+  text-decoration: none;
+  color: black;
+  width: fit-content;
   margin: 0px;
+  text-align: center;
   width: 10em;
-  font-size: 0.8em;
+  font-size: 0.7em;
+  margin-bottom: 1em;
+  margin-right: 0.5em;
+  border-radius: 10%;
+  background-color: #F1EDEA;
 }
 
 p.adcA{
+  text-decoration: none;
+  color: black;
+  width: fit-content;
   margin: 0px;
+  text-align: center;
   width: 8em;
-  font-size: 0.8em;
+  font-size: 0.7em;
+  margin-bottom: 1em;
+  margin-right: 0.5em;
+  border-radius: 10%;
+  background-color: #F1EDEA;
 }

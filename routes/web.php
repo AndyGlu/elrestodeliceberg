@@ -32,6 +32,7 @@ Route::get('/diet/{diet}', 'DietController@show');
 Route::get('/attribute/{attribute}', 'AttributeController@show');
 
 Route::get('/category/{category}', 'CategoryController@show');
+
 Route::get('/createAt', 'AttributeController@create')->middleware('auth')->middleware('CheckRole');
 Route::post('/createAt', 'AttributeController@store')->middleware('auth')->middleware('CheckRole');
 
