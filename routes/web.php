@@ -20,8 +20,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'ProductController@index');
-Route::get('/create', 'ProductController@create');
-Route::post('/create', 'ProductController@store');
+Route::get('/create', 'ProductController@create')->middleware('auth')->middleware('CheckRole');
+Route::post('/create', 'ProductController@store')->middleware('auth')->middleware('CheckRole');
 Route::get('/productshow/{product}', 'ProductController@show');
 Route::get('/user', 'UserController@show');
 Route::get('/search', 'ProductController@search');
@@ -32,15 +32,14 @@ Route::get('/diet/{diet}', 'DietController@show');
 Route::get('/attribute/{attribute}', 'AttributeController@show');
 
 Route::get('/category/{category}', 'CategoryController@show');
+Route::get('/createAt', 'AttributeController@create')->middleware('auth')->middleware('CheckRole');
+Route::post('/createAt', 'AttributeController@store')->middleware('auth')->middleware('CheckRole');
 
-Route::get('/createAt', 'AttributeController@create');
-Route::post('/createAt', 'AttributeController@store');
+Route::get('/createDiet', 'DietController@create')->middleware('auth')->middleware('CheckRole');
+Route::post('/createDiet', 'DietController@store')->middleware('auth')->middleware('CheckRole');
 
-Route::get('/createDiet', 'DietController@create');
-Route::post('/createDiet', 'DietController@store');
-
-Route::get('/createCat', 'CategoryController@create');
-Route::post('/createCat', 'CategoryController@store');
+Route::get('/createCat', 'CategoryController@create')->middleware('auth')->middleware('CheckRole');
+Route::post('/createCat', 'CategoryController@store')->middleware('auth')->middleware('CheckRole');
 
 Route::get('/cart', 'CartController@show')->middleware('auth');
 Route::get('/product/buycart/{id}', 'CartController@store2')->middleware('auth');
