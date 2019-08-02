@@ -64,7 +64,7 @@
                                 @endif
                             </div>
                         </div>
-                        <a href="/register"><button type="button" class="btn btn-light btn-sm registrateAqui">¿Todavia no tenes cuenta? Registrate aqui!</button></a>
+                        <a href="/register"><button type="button" class="btn btn-light btn-sm registrateAqui" style="background-color:white">¿Todavía no tenés cuenta? Registrate aqui!</button></a>
                     </form>
                 </div>
             </div>

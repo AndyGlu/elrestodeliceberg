@@ -9,7 +9,9 @@
 
 <body>
 <div class="forelsecontainer">
+  <br>
   <h2>Carrito</h2>
+  <br>
         @forelse ($cart as $item)
           <div class="cartProductsContainer">
           <h5 class="prodTittle">{{$item->name}}</h5>
@@ -19,9 +21,9 @@
           <form class="cantasegurar" action="/cart/{{$item->id}}" method="post">
               @csrf
               <div class="contadorCant">
-                <input class='quantity' type="number" id="cant-product" name="cant" value="{{$item->cant}}"  min="1" max="10">
-                <p class="productPrice">${{$item->price}}</p>
-                <p class='totalItemPrice'>${{$item->price * $item->cant}}</p>
+                <input class='quantity' type="number" id="cant-product" name="cant" value="{{$item->cant}}"  min="1" max="10" style="margin-top:0.5em">
+                <p style="font-size:0.8em" class="productPrice">${{$item->price}}</p>
+                <p style="font-size:1.2em" class='totalItemPrice'>${{$item->price * $item->cant}}</p>
               </div>
           </form>
 

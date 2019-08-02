@@ -122,14 +122,14 @@
 
       </li>
       <li class="nav-item" id="cart">
-        <a class="nav-link" href=""><i class="fas fa-shopping-cart navbutton"></i></a>
+        <a class="nav-link" href="/cart"><i class="fas fa-shopping-cart navbutton"></i></a>
       </li>
       </nav>
 
       <!-- LA SEGUNDA NAV BAR MOBILE-->
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="la-segunda">
-               
+
  <a href="/"><img id="icon23" class="iconoiceberg" src={{ asset("/images/iconIceberg.png") }} alt=""></a>
          <a class="navbar-brand" href="/"><small>El Resto del Iceberg</small></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

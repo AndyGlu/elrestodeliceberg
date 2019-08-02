@@ -101,7 +101,7 @@
                             </div>
                         </div>
                     </form>
-                    <a href="/login"><button type="button" class="btn btn-light btn-sm registrateAqui">¿Ya tenes cuenta? Entrá aquí</button></a>
+                    <a href="/login"><button type="button" class="btn btn-light btn-sm registrateAqui" style="background-color:white">¿Ya tenés cuenta? Entrá aquí</button></a>
                 </div>
             </div>
         </div>
