@@ -13,16 +13,16 @@
       <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item active" "carousel CSS" style="background-image:url('images/Natural Food.jpg'); background-size:cover; background-position:center">
+      <div class="carousel-item active carousel3" "carousel CSS" style="background-image:url('images/Natural Food.jpg'); background-size:cover; background-position:center">
         <a href="/category/9">  <img class="d-block w-100" id="img-carousel" src="" alt=""></a>
       </div>
-      <div class="carousel-item" style="background-image:url('images/nuts 1.jpg'); background-size:cover;">
+      <div class="carousel-item carousel3" style="background-image:url('images/nuts 1.jpg'); background-size:cover;">
       <a href="/category/11">  <img class="d-block w-100" id="img-carousel" src="" alt=""></a>
       </div>
-      <div class="carousel-item" style="background-image:url('images/berries.jpg'); background-size:cover; background-position:center">
+      <div class="carousel-item carousel3"  style="background-image:url('images/berries.jpg'); background-size:cover; background-position:center">
         <a href="/category/10"> <img class="d-block w-100" id="img-carousel" src="" alt=""></a>
       </div>
-      <div class="carousel-item" style="background-image:url('images/miel-natural.jpg'); background-size:cover; background-position:center">
+      <div class="carousel-item carousel3" style="background-image:url('images/miel-natural.jpg'); background-size:cover; background-position:center">
         <a href="/category/17">  <img class="d-block w-100" id="img-carousel" src="" alt=""></a>
       </div>
     </div>
@@ -157,7 +157,7 @@
 
                   <p class="prodpricemodal">Precio: <strong>{{$product->price}}</strong></p>
 
-                  <a id="addtocartmodal" href="/product/addtocart/{{$product->id}}"><button type="button" class="btn btn-success"><i class="fas fa-shopping-cart navbutton" id="productCart"></i></button></a>
+                  <a id="addtocartmodal" href="/product/addtocart/{{$product->id}}"><button type="button" class="" style="border-radius:50%; background-color:#D69764; width:2.3em; height:2.3em; color:white; border:solid 0px white"><i class="fas fa-shopping-cart"></i></button></a>
                 </div>
 
               </div>

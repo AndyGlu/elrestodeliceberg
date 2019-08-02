@@ -81,9 +81,11 @@
 
       <header>
 
-      <!-- LA PRIMER NAV BAR MOBILE-->
+{{-- NAV DE AMBAS LINEAS DE  MOBILE --}}
+<nav class="fixed-top">
+        <!-- LA PRIMER NAV BAR MOBILE-->
 
-       <nav class="la-de-arriba">
+       <nav class="la-de-arriba" style="background-color:white">
         <a class="nav-link dropdown-toggle navbutton" href="#" id="navbarDropdow" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-search navbutton"></i>
         </a>
@@ -175,10 +177,12 @@
           </ul>
         </div>
       </nav>
+{{-- FIN NAVBAR DOBLE MOBILE --}}
+    </nav>
 
       <!-- NAV BAR DESKTOP -->
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar-desktop">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar-desktop">
              <a href="/"><img id="icon23" class="iconoiceberg" src={{ asset("/images/iconIceberg.png") }} alt=""></a>
           <a class="navbar-brand" href="/">El Resto del Iceberg</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -365,10 +369,10 @@
     <small id="emailHelp" class="form-text text-muted"> Suscribite a nuestro newsletter para recibir las ofertas más piolas </small>
       <small id="emailHelp" class="form-text text-muted"> </small>
       </div>
-      <div class="" style="display:flex">
+      <div class="botonessuscribir" style="display:flex">
 
-      <input type="email" id="defaultSubscriptionFormEmail" class="form-control mb-4" placeholder="Correo electrónico" style="width:30%; margin-left:13em">
-      <button class="btn btn-info btn-block" type="submit" style="width:30%; height:2.4em; margin-left:2em">Suscribirse</button>
+      <input type="email" id="defaultSubscriptionFormEmail" class="form-control botonindividualsuscibir" placeholder="Correo">
+      <button class="btn btn-info btn-block botonindividualsuscibir" type="submit">Suscribirse</button>
     </div>
     </form>
 
