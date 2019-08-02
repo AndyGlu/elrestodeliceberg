@@ -47,10 +47,12 @@ form.cantasegurar{
   margin: 0px;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 div.contadorCant{
-width: 5%;
+display: flex;
+width: 100%;
 margin: 0px;
 }
 
@@ -58,9 +60,24 @@ div.priceShower{
   margin-left: 2%;
 }
 
+input.cant-product{
+  margin: 0;
+}
+
 p.productPrice{
   margin: 0px;
+  margin-right: 1em;
   font-family: sans-serif;
+  width: 100%;
+  text-align: center;
+  padding-top: 0.8em;
+}
+
+p.totalItemPrice{
+  margin-left: 1em;
+  margin-bottom: 0px;
+    padding-top: 0.8em;
+  text-align: center;
 }
 
 div.asegurarButton{
