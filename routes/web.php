@@ -23,9 +23,13 @@ Route::get('/', 'ProductController@index');
 Route::get('/create', 'ProductController@create')->middleware('auth')->middleware('CheckRole');
 Route::post('/create', 'ProductController@store')->middleware('auth')->middleware('CheckRole');
 Route::get('/productshow/{product}', 'ProductController@show');
-Route::get('/user', 'UserController@show');
 Route::get('/search', 'ProductController@search');
 
+// Route::get('/user', 'UserController@show');
+// Route::post('/user', 'UserController@update');
+
+Route::get('/user/{id}', 'UserController@edit');
+Route::post('/user/{id}', 'UserController@update');
 
 Route::get('/diet/{diet}', 'DietController@show');
 

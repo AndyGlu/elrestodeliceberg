@@ -8,30 +8,33 @@
   <html>
     <head>
       <meta charset="utf-8">
-      <title>Usuario</title>
-      <link rel="stylesheet" href="{{asset('css/app.css')}}">
+      <link rel="stylesheet" href="{{asset('css/user.css')}}">
     </head>
     <body>
       <div class="container">
-        <br>
-        <h2>Mi usuario</h2><br  />
-        <dl class="row">
-          <dt class="col-sm-1">Nombre</dt>
-          <dd class="col-sm-11">{{$user->name}}</dd>
-          <br><br>
+        <form action="{{url('user', [$user->id])}}" method="post">
+          @csrf
+          <div class="form-group">
+            <label for="exampleInputEmail1">Nombre</label>
+            <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$user->name}}">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Apellido</label>
+            <input type="text" name="lastname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$user->lastname}}">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$user->email}}">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Telefono</label>
+            <input type="text" name="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$user->phone}}">
+          </div>
+          
 
-          <dt class="col-sm-1">Apellido</dt>
-          <dd class="col-sm-11">{{$user->lastname}}</dd>
-<br><br>
-
-          <dt class="col-sm-1">Teléfono</dt>
-          <dd class="col-sm-11">{{$user->phone}}</dd>
-          <br><br>
-
-
-
-        </dl>
-      </div>
-    </body>
-  </html>
+          <a href=""><button type="submit" class="btn btn-primary">Actualizar Perfil</button></a>
+        </form>
+</div>
+</body>
+</html>
 @endsection

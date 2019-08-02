@@ -7,7 +7,9 @@ use App\Diet;
 use App\Category;
 use App\Cart;
 use App\Attribute;
+use App\User;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
 
@@ -20,6 +22,7 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
+      $user = Auth::user();
       $products = Product::query();
 
       if ($request->has('diets')) {

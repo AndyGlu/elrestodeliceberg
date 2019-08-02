@@ -3,6 +3,7 @@
   use App\Category;
   use App\Diet;
   use App\Attribute;
+  use App\User;
 
 
   // $categories = Categories::all();
@@ -290,7 +291,7 @@
               </a>
               <?php if (Auth::check()): ?>
                 <div class="dropdown-menu user-desktop navbutton" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="/user">Perfil</a>
+                  <a class="dropdown-item" href="/user/{{Auth::user()->id}}">Perfil</a>
                 <div class="dropdown-divider"></div>
                 <form class="dropdown-item" id="logout-form" action="{{ route('logout') }}" method="POST">
                     @csrf
