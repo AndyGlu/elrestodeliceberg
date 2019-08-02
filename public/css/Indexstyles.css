@@ -301,6 +301,10 @@ height:1em
   height: 10%;
 }
 
+.placeholder-class {
+  background-size: contain;
+}
+
 /* RESOLUCION DE PANTALLA DESKTOP = 992px */
 
 @media(min-width: 992px){
