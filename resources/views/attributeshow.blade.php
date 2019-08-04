@@ -3,7 +3,9 @@
 @section('content')
 <head>
   <link href="{{ asset('css/categoryshow.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/indexstyles.css') }}" rel="stylesheet">
 </head>
+<br>
 <h2 class="categorynametittle">{{$attribute->attributeName}}</h2>
 
 <div class="productcategory" style="margin: 0 auto;">
