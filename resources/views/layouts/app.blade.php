@@ -198,7 +198,7 @@
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: #EE7500">
             Categorías
           </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="overflow-y:scroll; max-height:30em">
           @foreach (Category::all() as $category)
             <a class="nav-link" href="/category/{{$category->id}}" name="category" style="text-align:center; text-decoration:none; color:#393D40">{{$category->categoryName}}</a>
           @endforeach
@@ -209,7 +209,7 @@
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: #D69764">
             Dietas
           </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="overflow-y:scroll; max-height:30em">
           @foreach (Diet::all() as $diet)
             <a class="nav-link" href="/diet/{{$diet->id}}" name="diet" style="text-align:center; text-decoration:none; color:#393D40">{{$diet->dietType}}</a>
           @endforeach
@@ -221,7 +221,7 @@
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background: #EE7500">
             Atributos
           </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="overflow-y:scroll; max-height:30em">
           @foreach (Attribute::all() as $attribute)
             <a class="nav-link" href="/attribute/{{$attribute->id}}" name="diet" style="text-align:center; text-decoration:none; color:#393D40">{{$attribute->attributeName}}</a>
           @endforeach
