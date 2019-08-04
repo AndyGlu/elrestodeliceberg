@@ -119,7 +119,7 @@
 			<dl class="dlist-inline">
 			  <dt>Cantidad: </dt>
 			  <dd>
-			  	<select class="form-control form-control-sm" style="width:70px;">
+			  	{{-- <select class="form-control form-control-sm" style="width:70px;">
 			  		<option> 1 </option>
 			  		<option> 2 </option>
 			  		<option> 3 </option>
@@ -131,7 +131,7 @@
             <option> 9 </option>            <option> 10 </option>
 
 
-			  	</select>
+			  	</select> --}}
 			  </dd>
 			</dl>  <!-- item-property .// -->
 
