@@ -18,14 +18,17 @@
           <div class="cartimgprodcont">
             <img class="cartprodimg" src="{{Storage::url($item->featured_img)}}" alt="">
           </div>
+          <div class="">
+
           <form class="cantasegurar" action="/cart/{{$item->id}}" method="post">
               @csrf
               <div class="contadorCant">
                 <p class="productPrice">${{$item->price}}</p>
-                <input class='quantity' type="number" id="cant-product" name="cant" value="{{$item->cant}}"  min="1" max="10" style="margin-top:0.5em">
-                <p class='totalItemPrice'>${{$item->price * $item->cant}}</p>
+                <input class='quantity quantity2' type="number" id="cant-product" name="cant" value="{{$item->cant}}"  min="1" max="10" style="margin-top:0.5em">
+                {{-- <p class="productPrice">${{$item->price * $item->cant}}</p> --}}
               </div>
           </form>
+        </div>
 
 
 <div class="deleteProdButton">
