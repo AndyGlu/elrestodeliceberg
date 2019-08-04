@@ -33,10 +33,13 @@ Route::get('/user/{id}', 'UserController@edit');
 Route::post('/user/{id}', 'UserController@update');
 
 Route::get('/diet/{diet}', 'DietController@show');
+Route::get('/diets', 'DietController@showdiets');
 
 Route::get('/attribute/{attribute}', 'AttributeController@show');
+Route::get('/attributes', 'AttributeController@showattributes');
 
 Route::get('/category/{category}', 'CategoryController@show');
+Route::get('/categories', 'CategoryController@showcategories');
 
 Route::get('/createAt', 'AttributeController@create')->middleware('auth')->middleware('CheckRole');
 Route::post('/createAt', 'AttributeController@store')->middleware('auth')->middleware('CheckRole');

@@ -88,4 +88,10 @@ class AttributeController extends Controller
     {
         //
     }
+
+    public function showattributes(){
+      $attributes = Attribute::all();
+
+      return view('attribute', compact('attributes'));
+    }
 }

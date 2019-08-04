@@ -87,4 +87,10 @@ class DietController extends Controller
     {
         //
     }
+
+    public function showdiets(){
+      $diets = Diet::all();
+
+      return view('diet', compact('diets'));
+    }
 }

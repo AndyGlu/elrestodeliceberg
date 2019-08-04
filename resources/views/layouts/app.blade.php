@@ -108,7 +108,7 @@
           <div class="dropdown-menu user-desktop navbutton" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="/user">Perfil</a>
             <div class="dropdown-divider"></div>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            <form id="logout-form" action="{{ route('logout') }}" method="POST">
                 @csrf
                 <button class="dropdown-item" id="logoutbutton" type="submit" name="">Log Out</button>
             </form>
@@ -139,43 +139,15 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            @foreach (Category::all() as $category)
-            @if ($category->categoryName == "Frutos secos")
-              <li class="nav-item active" id="categoria-menu">
-                <a class="nav-link" href="/category/11" name="category" style="text-align:center; text-decoration:none; color:#393D40">
-              </li>
-        {{$category->categoryName}}
-      </a>
-    @endif
-    @if ($category->categoryName == "Especias")
-      <li class="nav-item active" id="categoria-menu">
-        <a class="nav-link" href="/category/9" name="category" style="text-align:center; text-decoration:none; color:#393D40">
-      </li>
-       {{$category->categoryName}}
-    </a>
-    @endif
-    @if ($category->categoryName == "Harinas y avenas")
-      <li class="nav-item active" id="categoria-menu">
-        <a class="nav-link" href="/category/13" name="category" style="text-align:center; text-decoration:none; color:#393D40">
-      </li>
-      {{$category->categoryName}}
-    </a>
-    @endif
-    @if ($category->categoryName == "Barras de cereal")
-      <li class="nav-item active" id="categoria-menu">
-        <a class="nav-link" href="/category/3" name="category" style="text-align:center; text-decoration:none; color:#393D40">
-      </li>
-      {{$category->categoryName}}
-    </a>
-    @endif
-    @if ($category->categoryName == "Jugos y bebidas")
-      <li class="nav-item active" id="categoria-menu">
-        <a class="nav-link" href="/category/15" name="category" style="text-align:center; text-decoration:none; color:#393D40">
-      </li>
-      {{$category->categoryName}}
-    </a>
-    @endif
-    @endforeach
+            <li class="nav-item active" id="categoria-menu">
+              <a class="nav-link" href="/categories" name="category" style="text-align:center; text-decoration:none; color:#393D40">Categorías</a>
+            </li>
+            <li class="nav-item active" id="categoria-menu">
+              <a class="nav-link" href="/diets" name="category" style="text-align:center; text-decoration:none; color:#393D40">Dietas</a>
+            </li>
+            <li class="nav-item active" id="categoria-menu">
+              <a class="nav-link" href="/attributes" name="category" style="text-align:center; text-decoration:none; color:#393D40">Atributos</a>
+            </li>
           </ul>
         </div>
       </nav>
