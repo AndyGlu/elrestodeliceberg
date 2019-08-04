@@ -316,8 +316,9 @@ Conocé nuestras opciones de envío				</span>
 	<hr>
 <div class="">
 
-<a href="/product/buycart/{{$product->id}}" class="btn  btn-primary"> Comprar </a>
-<a href="/product/addtocart/{{$product->id}}" class="btn  btn-outline-primary"> <i class="fas fa-shopping-cart"></i> Agregar al carrito </a>
+<a style="background-color:#EE7500; border: 0" href="/product/buycart/{{$product->id}}" class="btn  btn-primary"> Comprar </a>
+
+<a href="/product/addtocart/{{$product->id}}" class="btn  btn-outline-primary" style="background-color:#D69764; border: 0; color:white"> <i class="fas fa-shopping-cart"></i> Agregar al carrito </a>
 </div>
 </div>
 </div>
