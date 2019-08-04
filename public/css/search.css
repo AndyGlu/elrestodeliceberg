@@ -58,6 +58,10 @@ div.producto{
   padding: 1em;
 }
 
+.prodpricemodal{
+  margin-top:3em;
+}
+
 @media(max-width: 992px){
   body{
   margin-top: 9em;
