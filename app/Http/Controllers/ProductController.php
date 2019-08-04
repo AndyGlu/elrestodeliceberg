@@ -37,7 +37,7 @@ class ProductController extends Controller
         });
       }
 
-      $products = $products->paginate(10);
+      $products = $products->paginate(100);
       $categories = Category::all();
       $diets = Diet::all();
       $attributes = Attribute::all();

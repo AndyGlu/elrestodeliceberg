@@ -142,35 +142,35 @@
             @foreach (Category::all() as $category)
             @if ($category->categoryName == "Frutos secos")
               <li class="nav-item active" id="categoria-menu">
-                <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:#393D40">
+                <a class="nav-link" href="/category/11" name="category" style="text-align:center; text-decoration:none; color:#393D40">
               </li>
         {{$category->categoryName}}
       </a>
     @endif
     @if ($category->categoryName == "Especias")
       <li class="nav-item active" id="categoria-menu">
-        <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:#393D40">
+        <a class="nav-link" href="/category/9" name="category" style="text-align:center; text-decoration:none; color:#393D40">
       </li>
        {{$category->categoryName}}
     </a>
     @endif
     @if ($category->categoryName == "Harinas y avenas")
       <li class="nav-item active" id="categoria-menu">
-        <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:#393D40">
+        <a class="nav-link" href="/category/13" name="category" style="text-align:center; text-decoration:none; color:#393D40">
       </li>
       {{$category->categoryName}}
     </a>
     @endif
     @if ($category->categoryName == "Barras de cereal")
       <li class="nav-item active" id="categoria-menu">
-        <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:#393D40">
+        <a class="nav-link" href="/category/3" name="category" style="text-align:center; text-decoration:none; color:#393D40">
       </li>
       {{$category->categoryName}}
     </a>
     @endif
     @if ($category->categoryName == "Jugos y bebidas")
       <li class="nav-item active" id="categoria-menu">
-        <a class="nav-link" href="#" name="category" style="text-align:center; text-decoration:none; color:#393D40">
+        <a class="nav-link" href="/category/15" name="category" style="text-align:center; text-decoration:none; color:#393D40">
       </li>
       {{$category->categoryName}}
     </a>

@@ -119,10 +119,10 @@
 
   <!-- PRODUCTOS -->
 
-  <div class="productcategory" ng-app="myApp">
+  <div class="productcategory">
   @foreach ($products as $product)
     <div class="producto">
-      <div class="img-producto-container" ng-controller="myCtrl" style="position: relative">
+      <div class="img-producto-container"  style="position: relative">
         <a href="/productshow/{{$product->id}}">
         <img class="imgproducto" style="position: relative" src="{{Storage::url($product->img1)}}" alt="" ng-image-appear responsive transition-duration="1s" animation="fadeInUp" animation-duration="1s" easing="ease-out">
         </a>
@@ -152,10 +152,15 @@
                 <img class="imgproducto" src="{{Storage::url($product->img1)}}" alt="">
                 </div>
 
+                <div class="">
                 <div class="descriptionModal">
                 <p class="proddescmodal">{{$product->productDescription}}</p>
 
+</div>
+<div class="descriptionModal">
+
                   <p class="prodpricemodal">Precio: <strong>{{$product->price}}</strong></p>
+                </div>
 
                   <a id="addtocartmodal" href="/product/addtocart/{{$product->id}}"><button type="button" class="" style="border-radius:50%; background-color:#D69764; width:2.3em; height:2.3em; color:white; border:solid 0px white"><i class="fas fa-shopping-cart"></i></button></a>
                 </div>

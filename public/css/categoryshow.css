@@ -11,3 +11,8 @@ div.producto{
   width: 24%;
   height: 30%;
 }
+
+body{
+  background-color: #FFFFFF;
+  margin-top:8.5em;
+}
