@@ -16,3 +16,9 @@ button.btn.btn-primary:hover{
   border: solid 1px #F1EDEA;
   color: black;
 }
+
+@media(max-width: 992px){
+  body{
+    margin-top: 40%;
+  }
+}
