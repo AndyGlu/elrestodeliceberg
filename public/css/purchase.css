@@ -17,6 +17,7 @@ ul.ticketdescription{
   border: dashed 1px grey;
   padding: 2em;
   border-radius: 3em;
+  margin-bottom: 10%;
 }
 
 li.productdescription{
@@ -38,4 +39,14 @@ div.totalticket{
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+@media(max-width: 992px){
+  body{
+    margin-top: 40%;
+  }
+
+  ul.ticketdescription{
+    width: 90%;
+  }
 }
