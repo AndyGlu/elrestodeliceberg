@@ -67,19 +67,19 @@
 <div class="categorias-container">
 
   <div class="categoria">
-    <a class="circulito" href="#"><img class="img-categoria" src="images/celiaco icono2.png" alt=""></a>
+    <a class="circulito" href="/diet/3"><img class="img-categoria" src="images/celiaco icono2.png" alt=""></a>
   </div>
 
   <div class="categoria">
-    <a class="circulito" href="#"><img class="img-categoria-vegan" src="images/vegan icono.png" alt=""></a>
+    <a class="circulito" href="/diet/2"><img class="img-categoria-vegan" src="images/vegan icono.png" alt=""></a>
   </div>
 
   <div class="categoria">
-    <a class="circulito" href="#"><img class="img-categoria-vegetariano" src="images/cruelty free icono.svg" alt=""></a>
+    <a class="circulito" href="/diet/2"><img class="img-categoria-vegetariano" src="images/cruelty free icono.svg" alt=""></a>
   </div>
 
   <div class="categoria">
-    <a class="circulito" href="#"><img class="img-categoria-organico" src="images/organico icono.svg" alt=""></a>
+    <a class="circulito" href="/diet/6"><img class="img-categoria-organico" src="images/organico icono.svg" alt=""></a>
   </div>
 
 </div>
