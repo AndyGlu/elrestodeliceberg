@@ -16,7 +16,7 @@ class CheckRole
     public function handle($request, Closure $next)
     {
       // dd($request->user()->role);
-      if ($request->user() && $request->user()->role = 0){
+      if ($request->user() && $request->user()->role = 1){
         return redirect('/');
         }
 
